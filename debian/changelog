@@ -1,3 +1,11 @@
+blankon-installer (0.1.35) suroboyo; urgency=low
+
+  * scripts/b-i-install-grub 
+    - remove GRUB_CMDLINE_LINUX_DEFAULT="quiet consol=tty2"
+    - add GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"  
+
+ -- mijortsa <azis.astrojim@surabaya.di.blankon.in>  Thu, 07 Nov 2013 07:07:12 +0700
+
 blankon-installer (0.1.34) suroboyo; urgency=low
 
   * Change path locale b-i-copy-fs
