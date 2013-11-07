@@ -28,6 +28,7 @@ Depends: parted,
          passwd, 
          initramfs-tools, 
          blankon-repository-setup,
+         plymouth-theme-blankon
          ${misc:Depends}, 
          ${shlibs:Depends}
 Conflicts: debian-installer-launcher

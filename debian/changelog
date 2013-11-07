@@ -1,3 +1,9 @@
+blankon-installer (0.1.36) suroboyo; urgency=low
+
+  * added depends plymouth-theme-blankon
+
+ -- mijortsa <azis.astrojim@surabaya.di.blankon.in>  Thu, 07 Nov 2013 07:20:04 +0700
+
 blankon-installer (0.1.35) suroboyo; urgency=low
 
   * scripts/b-i-install-grub 
