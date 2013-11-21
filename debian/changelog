@@ -1,3 +1,11 @@
+blankon-installer (0.1.38) suroboyo; urgency=low
+
+  * scripts/blankon-session-try-installer
+    - Added option user: -u "$USER" 
+    - Fix script to run blankon-session by User in Live
+
+ -- Mahyuddin Idram Ahmad <dotovr@di.blankon.in>  Thu, 21 Nov 2013 19:10:46 +0700
+
 blankon-installer (0.1.37) suroboyo; urgency=low
 
   * scripts/blankon-session-try-installer:

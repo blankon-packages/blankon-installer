@@ -9,9 +9,8 @@ if [ $? -eq 0 -a -x /usr/bin/blankon-installer ];then
 
     rm -f /run/locale
 
-    export HOME=/root
-
-    sudo -E nice -n -20 blankon-installer
+    # Add option user to identify owner
+    sudo -E nice -n -20 -u "USER" blankon-installer
 
     # Run post-install script when created by blankon-installer
     if [ -f /tmp/post-install.sh ];then
