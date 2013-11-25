@@ -1,3 +1,9 @@
+blankon-installer (0.1.39) suroboyo; urgency=low
+
+  * New style
+
+ -- princeofgiri <princeofgiri@di.blankon.in>  Mon, 25 Nov 2013 11:54:33 +0700
+
 blankon-installer (0.1.38) suroboyo; urgency=low
 
   * scripts/blankon-session-try-installer

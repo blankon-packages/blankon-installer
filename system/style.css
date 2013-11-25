@@ -1,3 +1,8 @@
+/*
+dasar tombol : http://www.red-team-design.com/just-another-awesome-css3-buttons
+entity icons : http://www.codemonkeyjack.com/EntitiesChart.html
+*/
+
 body {
     background-color: #dedede;
     margin: 0px 0px 0px 0px;
@@ -143,28 +148,90 @@ select{
 }
 
 a.ui-button-toolbar-enabled {
-    color: black;
-    cursor: pointer;
+  
 }
 
 a.ui-button-toolbar-disabled {
-    color: #aeaeae;
-    cursor: default;
+	background-image: -webkit-linear-gradient(top, #555, #ccc);
+	background-image: -moz-linear-gradient(top, #555, #ccc);
+	background-image: -ms-linear-gradient(top, #555, #ccc);
+	background-image: -o-linear-gradient(top, #555, #ccc);
+	background-image: linear-gradient(top, #555, #ccc); 
 }
 
 a.ui-button-toolbar {
-    font-size: 16px;
-    border-radius: 10px;
-    font-weight: bold;
-    padding: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    background-color: #dedede;
+	cursor: pointer;
+	display: inline-block;
+	white-space: nowrap;
+	background-color: #ccc;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ccc));
+	background-image: -webkit-linear-gradient(top, #eee, #ccc);
+	background-image: -moz-linear-gradient(top, #eee, #ccc);
+	background-image: -ms-linear-gradient(top, #eee, #ccc);
+	background-image: -o-linear-gradient(top, #eee, #ccc);
+	background-image: linear-gradient(top, #eee, #ccc);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#cccccc');
+	border: 1px solid #777;
+	padding: 0 1.5em;
+	margin: 0.5em;
+	font: bold 1em/2em Arial, Helvetica;
+	text-decoration: none;
+	color: #333;
+	text-shadow: 0 1px 0 rgba(255,255,255,.8);
+	-moz-border-radius: .2em;
+	-webkit-border-radius: .2em;
+	border-radius: .2em;
+	-moz-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+	-webkit-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+	box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+}
+}
+a.ui-button-toolbar:hover
+{
+	background-color: #ddd;        
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#ddd));
+	background-image: -webkit-linear-gradient(top, #fafafa, #ddd);
+	background-image: -moz-linear-gradient(top, #fafafa, #ddd);
+	background-image: -ms-linear-gradient(top, #fafafa, #ddd);
+	background-image: -o-linear-gradient(top, #fafafa, #ddd);
+	background-image: linear-gradient(top, #fafafa, #ddd);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#fafafa', EndColorStr='#dddddd');        
 }
 
-a.ui-button-toolbar-enabled:hover {
-    background-color: #aeaeae;
+a.ui-button-toolbar:active
+{
+	-moz-box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
+	-webkit-box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
+	box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
+	position: relative;
+	top: 1px;
 }
+
+a.ui-button-toolbar:focus
+{
+	outline: 0;
+	background: #fafafa;
+}      
+
+a.ui-button-toolbar:before
+{
+	background: #ccc;
+	background: rgba(0,0,0,.1);
+	float: left;        
+	width: 1em;
+	text-align: center;
+	font-size: 1.5em;
+	margin: 0 1em 0 -1em;
+	padding: 0 .2em;
+	-moz-box-shadow: 1px 0 0 rgba(0,0,0,.5), 2px 0 0 rgba(255,255,255,.5);
+	-webkit-box-shadow: 1px 0 0 rgba(0,0,0,.5), 2px 0 0 rgba(255,255,255,.5);
+	box-shadow: 1px 0 0 rgba(0,0,0,.5), 2px 0 0 rgba(255,255,255,.5);
+	-moz-border-radius: .15em 0 0 .15em;
+	-webkit-border-radius: .15em 0 0 .15em;
+	border-radius: .15em 0 0 .15em;
+        pointer-events: none;        
+}
+
 
 div.steps {
     margin-top: 10px;
@@ -192,24 +259,61 @@ div.steps_long {
 }
 
 div.device {
-    width: 500px;
-    background-color: #d0d0d0;
-    border-color: #202020;
-    border-width: 1px;
-    border-style: solid;
-    border-radius: 10px;
+
+	display: inline-block;
+	white-space: nowrap;
+	background-color: #ccc;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ccc));
+	background-image: -webkit-linear-gradient(top, #eee, #ccc);
+	background-image: -moz-linear-gradient(top, #eee, #ccc);
+	background-image: -ms-linear-gradient(top, #eee, #ccc);
+	background-image: -o-linear-gradient(top, #eee, #ccc);
+	background-image: linear-gradient(top, #eee, #ccc);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#cccccc');
+	border: 1px solid #777;
+	padding: 0 1.5em;
+	margin: 0.5em;
+	font: bold 1em/2em Arial, Helvetica;
+	text-decoration: none;
+	color: #333;
+	text-shadow: 0 1px 0 rgba(255,255,255,.8);
+	-moz-border-radius: .2em;
+	-webkit-border-radius: .2em;
+	border-radius: .2em;
+	-moz-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+	-webkit-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+	box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+
+    width: 600px;
+
+    border-radius: 7px;
     padding: 10px;
 }
 
 .ui-partition {
-    width: inherit;
-    border-radius: 10px;
-    padding: 10px;
-    background-color: #a0a0a0;
-    border-color: #202020;
-    border-width: 1px;
-    border-style: solid;
-    cursor: pointer;
+    	
+    	background-color: #ccc;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ccc));
+	background-image: -webkit-linear-gradient(top, #eee, #ccc);
+	background-image: -moz-linear-gradient(top, #eee, #ccc);
+	background-image: -ms-linear-gradient(top, #eee, #ccc);
+	background-image: -o-linear-gradient(top, #eee, #ccc);
+	background-image: linear-gradient(top, #eee, #ccc);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#cccccc');
+	border: 1px solid #777;
+	padding: 0 1.5em;
+	margin: 0.5em;
+	font: bold 1em/2em Arial, Helvetica;
+	text-decoration: none;
+	color: #333;
+	text-shadow: 0 1px 0 rgba(255,255,255,.8);
+	-moz-border-radius: .2em;
+	-webkit-border-radius: .2em;
+	border-radius: .2em;
+	-moz-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+	-webkit-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+	box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+    	cursor: pointer;
 }
 
 .ui-partition:hover {
@@ -222,22 +326,51 @@ div.device {
 
 .ui-partition-selected {
     background-color: #505050;
-    color: white;
+    
     border-color: white;
+	
 }
 
+.ui-partition-selected:after {
+content:"\2714   ";
+float: right;        
+	text-align: center;
+	font-size: 1.5em;
+	
+}
+
+
+
 .ui-partition-disabled {
-    background-color: #a0a0a0;
-    color: #f0f0f0;
-    border-color: #202020;
-    border-width: 1px;
-    border-style: solid;
-    border-radius: 10px;
-    padding: 10px;
+
+
+	background-color: #a0a0a0;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ccc));
+	background-image: -webkit-linear-gradient(top, #a0a0a0, #ccc);
+	background-image: -moz-linear-gradient(top, #a0a0a0, #ccc);
+	background-image: -ms-linear-gradient(top, #a0a0a0, #ccc);
+	background-image: -o-linear-gradient(top, #a0a0a0, #ccc);
+	background-image: linear-gradient(top, #a0a0a0, #ccc);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#cccccc');
+	border: 1px solid #777;
+	padding: 0 1.5em;
+	margin: 0.5em;
+	font: bold 1em/2em Arial, Helvetica;
+	text-decoration: none;
+	color: #555;
+	text-shadow: 0 1px 0 rgba(255,255,255,.8);
+	-moz-border-radius: .2em;
+	-webkit-border-radius: .2em;
+	border-radius: .2em;
+	-moz-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+	-webkit-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+	box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+
+
 }
 
 .ui-partition-disabled:hover {
-    cursor: crosshair;
+    cursor: default;
 }
 
 input.fields {
@@ -265,22 +398,141 @@ div.ui-hint-warning {
     display: none;
 }
 
-a.button {
-    font-size: 16px;
-    border-radius: 10px;
-    font-weight: bold;
-    color: white;
-    background-color: #353535;
-    padding: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    cursor: pointer;
+a.button
+{        
+	cursor: pointer;
+	display: inline-block;
+	white-space: nowrap;
+	background-color: #ccc;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ccc));
+	background-image: -webkit-linear-gradient(top, #eee, #ccc);
+	background-image: -moz-linear-gradient(top, #eee, #ccc);
+	background-image: -ms-linear-gradient(top, #eee, #ccc);
+	background-image: -o-linear-gradient(top, #eee, #ccc);
+	background-image: linear-gradient(top, #eee, #ccc);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#cccccc');
+	border: 1px solid #777;
+	padding: 0 1.5em;
+	margin: 0.5em;
+	font: bold 1em/2em Arial, Helvetica;
+	text-decoration: none;
+	color: #333;
+	text-shadow: 0 1px 0 rgba(255,255,255,.8);
+	-moz-border-radius: .2em;
+	-webkit-border-radius: .2em;
+	border-radius: .2em;
+	-moz-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+	-webkit-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+	box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
 }
 
-a.button:hover {
-    color: black;
-    background-color: #858585;
+a.button:hover
+{
+	background-color: #ddd;        
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#ddd));
+	background-image: -webkit-linear-gradient(top, #fafafa, #ddd);
+	background-image: -moz-linear-gradient(top, #fafafa, #ddd);
+	background-image: -ms-linear-gradient(top, #fafafa, #ddd);
+	background-image: -o-linear-gradient(top, #fafafa, #ddd);
+	background-image: linear-gradient(top, #fafafa, #ddd);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#fafafa', EndColorStr='#dddddd');        
 }
+
+a.button:active
+{
+	-moz-box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
+	-webkit-box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
+	box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
+	position: relative;
+	top: 1px;
+}
+
+a.button:focus
+{
+	outline: 0;
+	background: #fafafa;
+}    
+
+a.button:before
+{
+	background: #ccc;
+	background: rgba(0,0,0,.1);
+	float: left;        
+	width: 1em;
+	text-align: center;
+	font-size: 1.5em;
+	margin: 0 1em 0 -1em;
+	padding: 0 .2em;
+	-moz-box-shadow: 1px 0 0 rgba(0,0,0,.5), 2px 0 0 rgba(255,255,255,.5);
+	-webkit-box-shadow: 1px 0 0 rgba(0,0,0,.5), 2px 0 0 rgba(255,255,255,.5);
+	box-shadow: 1px 0 0 rgba(0,0,0,.5), 2px 0 0 rgba(255,255,255,.5);
+	-moz-border-radius: .15em 0 0 .15em;
+	-webkit-border-radius: .15em 0 0 .15em;
+	border-radius: .15em 0 0 .15em;
+        pointer-events: none;        
+}
+
+/* Hexadecimal entities for the icons */
+
+a.add:before
+{
+	content: "\271A";
+}
+
+a.edit:before
+{
+	content: "\270E";        
+}
+
+a.delete:before
+{
+	content: "\2718";        
+}
+
+a.save:before
+{
+	content: "\2714";        
+}
+
+a.email:before
+{
+	content: "\2709";        
+}
+
+a.like:before
+{
+	content: "\2764";        
+}
+
+a.install:before
+{
+	content: "\279F";
+}
+
+a.next:before
+{
+	content: "\21D2";
+}
+
+a.previous:before
+{
+	content: "\21D0";
+}
+
+a.star:before
+{
+	content: "\2605";
+}
+
+a.spark:before
+{
+	content: "\2737";
+}
+
+a.play:before
+{
+	content: "\25B6";
+} 
 
 div#base {
     width: 100%;
@@ -364,3 +616,6 @@ textarea.log {
     75% { border-left: 3px solid black; }
     100% { border-top: 3px solid black; }
 }
+
+
+

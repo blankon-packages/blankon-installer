@@ -47,14 +47,14 @@
         <p><span>You can choose whether want to continue using the Live CD or to install into your computer</span></p>
 
         <a class="button btn-shutdown"><span>Continue using Live CD</span></a>
-        <a class="button" id="btn-install"><span>Install BlankOn</span></a>
+        <a class="button install" id="btn-install"><span>Install BlankOn</span></a>
     </div>
 
     <div class="ui-page" id="target">
         <h1><span>Installation Target</span></h1>
         <div id="no_target" style="display:none"><span>Sorry, it seems that there is no device that we can install BlankOn into. Please attach a hard drive or flash disk before continuing. If you're running as normal user, try again running the installer as root.</span></div>
         <div id="waiting_target"><span>Please wait while I scan your computer for available devices</span></div>
-        <div id="select_target" style="display:none"><span>Please choose the partition on device below which you would like to install BlankOn into.<p/><b><span>WARNING</span></b>: <span>The selected partition will be wiped out. Swap partition will be created if you don't have one.</span></div>
+        <div id="select_target" style="display:none"><span>Please choose the partition on device below which you would like to install BlankOn into. <p/><b><span>WARNING</span></b>: <span>The selected partition will be wiped out. Swap partition will be created if you don't have one.</span></div>
 
         <div id="device_list">
         </div>
@@ -142,8 +142,8 @@
         <span id="ui-switch-mode-advanced-text" style="display:none">Click to switch to Advanced Mode</span>
     </div>
     <div class="ui-navigation-buttons">
-        <a class="ui-button-toolbar ui-button-toolbar-enabled" id="prev"><span>Previous</span></a>
-        <a class="ui-button-toolbar ui-button-toolbar-disabled" id="next"><span>Next</span></a>
+        <a class="ui-button-toolbar previous ui-button-toolbar-enabled" id="prev"><span>Previous</span></a>
+        <a class="ui-button-toolbar next ui-button-toolbar-disabled" id="next"><span>Next</span></a>
     </div>
 </nav>
 
