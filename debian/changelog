@@ -1,7 +1,14 @@
+blankon-installer (0.1.41) suroboyo; urgency=low
+
+  * b-i-setup-fs
+    - change path packages-to-remove original 
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Sun, 05 Jan 2014 16:11:54 +0700
+
 blankon-installer (0.1.40) suroboyo; urgency=low
 
   * b-i-setup-fs
-    - change patcj packages-to-remove 
+    - change path packages-to-remove 
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Sun, 05 Jan 2014 10:09:27 +0700
 
