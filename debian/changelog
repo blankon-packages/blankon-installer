@@ -1,3 +1,9 @@
+blankon-installer (0.1.42) suroboyo; urgency=medium
+
+  * Fixing sentence on first page
+
+ -- princeofgiri <princeofgiri@di.blankon.in>  Thu, 09 Jan 2014 10:30:19 +0700
+
 blankon-installer (0.1.41) suroboyo; urgency=low
 
   * b-i-setup-fs
