@@ -1,3 +1,10 @@
+blankon-installer (0.1.43) suroboyo; urgency=low
+
+  * system/languages.json:
+    - Set name ace.utf8 to Bahsa Aceh
+
+ -- Mahyuddin Ramli <yudi.al@gmail.com>  Mon, 20 Jan 2014 22:29:41 +0700
+
 blankon-installer (0.1.42) suroboyo; urgency=medium
 
   * Fixing sentence on first page
