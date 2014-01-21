@@ -1,3 +1,9 @@
+blankon-installer (0.1.44) suroboyo; urgency=low
+
+  * Fix language.json  ache
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Tue, 21 Jan 2014 12:01:42 +0700
+
 blankon-installer (0.1.43) suroboyo; urgency=low
 
   * system/languages.json:
