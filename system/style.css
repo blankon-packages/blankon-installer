@@ -157,6 +157,7 @@ a.ui-button-toolbar-disabled {
 	background-image: -ms-linear-gradient(top, #555, #ccc);
 	background-image: -o-linear-gradient(top, #555, #ccc);
 	background-image: linear-gradient(top, #555, #ccc); 
+        display: none;
 }
 
 a.ui-button-toolbar {

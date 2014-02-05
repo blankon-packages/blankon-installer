@@ -551,9 +551,25 @@ var install = (function(){
         selection.show();
         var zone = $("#opt-zone").val();
         var data = Utils.getTimezones(zone);
+        var prioritizedCities = ["Jakarta", "Jayapura", "Ujung Pandang", "Pontianak"];
+	
+	for (var j = 0; j < prioritizedCities.length; j++) {
+	  var city = prioritizedCities[j];
+          var name = city;
+          if (city == "Ujung Pandang") {
+	    name = "Makassar";
+	  } 
+	  var opt = $("<option>").text(name).attr("value", zone + "/" + city);
+          selection.append(opt);
+        }
+
         for (var i = 0; i < data.length; i ++) {
+            var city = data[i].replace("_", " ");
+            if ( city.indexOf(prioritizedCities) >= 0 ) {
+		continue;
+            }
             var opt = $("<option>").
-                text(data[i].replace("_", " ")).
+                text(city).
                 attr("value", zone + "/" + data[i]);
             selection.append(opt);
         }
@@ -646,6 +662,7 @@ var install = (function(){
         setupButtons();
         setupForm();
         setupAjax();
+        changeZone();
         goNextPage();
         applyMode();
         translate();
