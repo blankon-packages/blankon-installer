@@ -1,3 +1,9 @@
+blankon-installer (0.1.45) suroboyo; urgency=medium
+
+  * replace version
+
+ -- mijortsa <azis.astrojim@surabaya.di.blankon.in>  Wed, 05 Feb 2014 16:17:38 +0700
+
 blankon-installer (0.1.41) suroboyo; urgency=medium
 
   * Fix Next buttons
