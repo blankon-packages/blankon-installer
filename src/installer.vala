@@ -690,7 +690,7 @@ public class Installation : GLib.Object {
 
 public class Installer : WebView {
     string translate_uri (string old) {
-        var uri = old.replace("http://system", "file://" + Config.SYSTEM_PATH + "/");
+        var uri = old.replace("http://system", "file://" + Config.SYSTEM_PATH + "");
         return uri;
     }
 
@@ -712,6 +712,7 @@ public class Installer : WebView {
         var settings = new WebSettings();
         settings.enable_file_access_from_file_uris = true;
         settings.enable_universal_access_from_file_uris = true;
+        // settings.enable_developer_extras = true;
         set_settings(settings);
 
         resource_request_starting.connect((frame, resource, request, response) => {

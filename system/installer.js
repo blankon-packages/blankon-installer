@@ -265,7 +265,12 @@ var install = (function(){
         return true;
     }
 
-    var goNextPage = function() {
+    var goNextPage = function(e) {
+	var disabled = $(this).hasClass("ui-button-toolbar-disabled");
+        if (disabled) {
+	  e.preventDefault();
+          return;
+	}
         if (canGoNextPage()) {
             previousPage = currentPage;
             currentPage ++;

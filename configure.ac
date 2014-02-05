@@ -16,7 +16,8 @@ if test $USE_DEVEL = yes ; then
 AC_DEFINE_UNQUOTED(SYSTEM_PATH, "$PWD/system", [Location of the JS scripts])
 AC_SUBST(SYSTEM_PATH)
 else
-AC_DEFINE(SYSTEM_PATH, "/usr/lib/blankon-installer/system", [Location of the JS scripts])
+#AC_DEFINE(SYSTEM_PATH, "/usr/lib/blankon-installer/system", [Location of the JS scripts])
+AC_DEFINE(SYSTEM_PATH, "/home/diorahman/Experiments/blankon-installer/system", [Location of the JS scripts])
 AC_SUBST(SYSTEM_PATH)
 fi
 
