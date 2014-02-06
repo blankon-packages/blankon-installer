@@ -1,3 +1,9 @@
+blankon-installer (0.1.50) suroboyo; urgency=medium
+
+  * add Makefile.am bootstrap.min.css
+
+ -- mijortsa <azis.astrojim@surabaya.di.blankon.in>  Thu, 06 Feb 2014 17:07:25 +0700
+
 blankon-installer (0.1.49) suroboyo; urgency=medium
 
   * resubmit
