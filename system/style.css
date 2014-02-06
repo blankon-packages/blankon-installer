@@ -4,7 +4,8 @@ entity icons : http://www.codemonkeyjack.com/EntitiesChart.html
 */
 
 body {
-    background-color: #dedede;
+    /*background-color: #dedede;*/
+    background-color: #F8F8F8;
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
     font-family: "Sans";
@@ -164,7 +165,7 @@ a.ui-button-toolbar {
 	cursor: pointer;
 	display: inline-block;
 	white-space: nowrap;
-	background-color: #ccc;
+	background-color: #000;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ccc));
 	background-image: -webkit-linear-gradient(top, #eee, #ccc);
 	background-image: -moz-linear-gradient(top, #eee, #ccc);
