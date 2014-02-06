@@ -1,3 +1,10 @@
+blankon-installer (0.1.47) suroboyo; urgency=low
+
+  * Changes: Remove option -u "USER" in nice not valid
+  * Make default user $blankon
+
+ -- Mahyuddin Ramli <yudi.al@gmail.com>  Thu, 06 Feb 2014 11:55:00 +0700
+
 blankon-installer (0.1.46) suroboyo; urgency=low
 
   * Changes: Remove packages from correct location  
