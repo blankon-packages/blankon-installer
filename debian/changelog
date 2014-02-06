@@ -1,3 +1,9 @@
+blankon-installer (0.1.46) suroboyo; urgency=low
+
+  * Changes: Remove packages from correct location  
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Thu, 06 Feb 2014 10:32:31 +0700
+
 blankon-installer (0.1.45) suroboyo; urgency=medium
 
   * replace version
