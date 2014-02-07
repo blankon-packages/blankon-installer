@@ -1,3 +1,9 @@
+blankon-installer (0.1.51) suroboyo; urgency=low
+
+  * Correct locale-gen path
+
+ -- Mahyuddin Ramli <yudi.al@gmail.com>  Fri, 07 Feb 2014 16:30:12 +0700
+
 blankon-installer (0.1.50) suroboyo; urgency=medium
 
   * add Makefile.am bootstrap.min.css
