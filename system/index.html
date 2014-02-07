@@ -25,7 +25,7 @@
 				<p><span>Welcome to BlankOn installation program. Please choose your language and region below to continue. If your choice is not on the list, you can choose the default values and set again later after the system is fully installed in the Settings application.</span></p>
 				<p>
 					<div class="form-group">
-						<label class="control-label">Language</label>
+            <label class="control-label"><span>Language</span></label>
 						<div class="col-sm-2">
 							<select class="form-control" id="opt-language"></select>
 						</div>
@@ -67,7 +67,7 @@
 				<h1><span>Installation Target</span></h1>
 				<div id="no_target" style="display:none"><span>Sorry, it seems that there is no device that we can install BlankOn into. Please attach a hard drive or flash disk before continuing. If you're running as normal user, try again running the installer as root.</span></div>
 				<div id="waiting_target"><span>Please wait while I scan your computer for available devices</span></div>
-				<div id="select_target" style="display:none"><span>Please choose the partition on device below which you would like to install BlankOn into. <p/><b><span>WARNING</span></b>: <span>The selected partition will be wiped out. Swap partition will be created if you don't have one.</span></div>
+        <div id="select_target" style="display:none"><span>Please choose the partition on device below which you would like to install BlankOn into.</span> <p/><b><span>WARNING</span></b>: <span>The selected partition will be wiped out. Swap partition will be created if you don't have one.</span></div>
 				<div id="device_list">
 
 				</div>
@@ -100,14 +100,14 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="Your-Name">Your Name</label>
+          <label for="Your-Name"><span>Your Name</span></label>
 					<div class="col-sm-2">
 						<input type="text" class="form-control" id="txt-full-name" placeholder="Your Name">
 						<div class="ui-hint" id="hint-txt-computer-name"><span>Computer name must be at least 1 character long and started with an alphabet. It must be written in lowercase ascii without any space.</span></div>
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="User-name">User Name</label>
+          <label for="User-name"><span>User Name</span></label>
 					<div class="col-sm-2">
 						<input type="text" class="form-control" id="txt-user-name">
 						<div class="ui-hint" id="hint-txt-user-name"><span>Username must be at least 1 character long and started with an alphabet. It must be written in lowercase ascii without any space.</span></div>
