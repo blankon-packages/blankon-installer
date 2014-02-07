@@ -92,6 +92,7 @@ ff02::2 ip6-allrouters
 if [ -f /run/locale ];then
     cp /run/locale /target/etc/default/
 fi
+do_chroot /usr/sbin/locale-gen
 
 ###### Timezone
 cp -f $ROOTFS/etc/localtime $ROOTFS/target/etc/localtime
