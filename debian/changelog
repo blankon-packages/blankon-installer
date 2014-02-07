@@ -1,3 +1,9 @@
+blankon-installer (0.1.52) suroboyo; urgency=low
+
+  * Correct word wrap
+
+ -- Mahyuddin Ramli <yudi.al@gmail.com>  Fri, 07 Feb 2014 17:20:09 +0700
+
 blankon-installer (0.1.51) suroboyo; urgency=low
 
   * Correct locale-gen path
