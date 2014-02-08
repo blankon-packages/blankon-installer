@@ -2,8 +2,8 @@
 <html>
 	<head>
 		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width"/>
-		<link rel="stylesheet" href="style.css"/>
 		<link rel="stylesheet" href="bootstrap.min.css"/>
+		<link rel="stylesheet" href="style.css"/>
 
 		<script type="text/javascript" src="jq.js">
 		</script>
@@ -12,20 +12,20 @@
 	</head>
 	<body>
 		<div id="base">
-			<div class="navbar navbar-inner" style="background-image: linear-gradient(#158CBA, #158CBA 50%, #158CBA);" role="navigation">
-			 <div class="container">
-				 <div class="navbar-header">
-					 <img src="blankon.png" id="logo"/>
-				 </div>
-			 </div>
-		 </div>
-			
-			<div class="ui-page form-horizontal" id="first" data-toolbar="no">
+			<div class="navbar navbar-inner" style="background-color:#158CBA;" role="navigation">
+				<div class="container">
+					<div class="navbar-header navbar-right">
+						<img src="blankon.png" id="logo"/>
+					</div>
+				</div>
+			</div>
+		 
+			<div class="ui-page form-horizontal jumbotron" id="first" data-toolbar="no">
 				<h1><span>Welcome to BlankOn</span></h1>
 				<p><span>Welcome to BlankOn installation program. Please choose your language and region below to continue. If your choice is not on the list, you can choose the default values and set again later after the system is fully installed in the Settings application.</span></p>
 				<p>
 					<div class="form-group">
-            <label class="control-label"><span>Language</span></label>
+						<label class="control-label">Language</label>
 						<div class="col-sm-2">
 							<select class="form-control" id="opt-language"></select>
 						</div>
@@ -62,21 +62,21 @@
 				<button class="btn btn-info btn-shutdown"><span>Continue using Live CD</span></button>
 				<button class="btn btn-success" id="btn-install"><span>Install BlankOn</span></button>
 			</div>
+			
 			<!--Langkah Partisi-->
 			<div class="ui-page" id="target">
 				<h1><span>Installation Target</span></h1>
 				<div id="no_target" style="display:none"><span>Sorry, it seems that there is no device that we can install BlankOn into. Please attach a hard drive or flash disk before continuing. If you're running as normal user, try again running the installer as root.</span></div>
 				<div id="waiting_target"><span>Please wait while I scan your computer for available devices</span></div>
-        <div id="select_target" style="display:none"><span>Please choose the partition on device below which you would like to install BlankOn into.</span> <p/><b><span>WARNING</span></b>: <span>The selected partition will be wiped out. Swap partition will be created if you don't have one.</span></div>
-				<div id="device_list">
-
+				<div id="select_target" style="display:none"><span>Please choose the partition on device below which you would like to install BlankOn into. <p/><b><span>WARNING</span></b>: <span>The selected partition will be wiped out. Swap partition will be created if you don't have one.</span></div>
+				<div id="device_list" >
+					
 				</div>
-
 			</div>
 		
 			<!--Langkah personalization-->
 			
-			<div class="ui-page form-horizontal" id="personalization">
+			<div class="ui-page form-horizontal jumbotron" id="personalization">
 				
 				
 				<!--Cobaan-->
@@ -100,14 +100,14 @@
 					</div>
 				</div>
 				<div class="form-group">
-          <label for="Your-Name"><span>Your Name</span></label>
+					<label for="Your-Name">Your Name</label>
 					<div class="col-sm-2">
 						<input type="text" class="form-control" id="txt-full-name" placeholder="Your Name">
 						<div class="ui-hint" id="hint-txt-computer-name"><span>Computer name must be at least 1 character long and started with an alphabet. It must be written in lowercase ascii without any space.</span></div>
 					</div>
 				</div>
 				<div class="form-group">
-          <label for="User-name"><span>User Name</span></label>
+					<label for="User-name">User Name</label>
 					<div class="col-sm-2">
 						<input type="text" class="form-control" id="txt-user-name">
 						<div class="ui-hint" id="hint-txt-user-name"><span>Username must be at least 1 character long and started with an alphabet. It must be written in lowercase ascii without any space.</span></div>
@@ -117,9 +117,13 @@
 					<label for="Password"><span>Password</span></label>
 					<div class="col-sm-2">
 						<input type="password" class="form-control" id="txt-password" value="" placeholder="type password here"/>
-						<div class="ui-hint" id="hint-txt-password-strong"><span>Password must be at least 8 character long with number and alphabet lowercase and uppercase combination.</span></div>
+						<div class="ui-hint" id="hint-txt-password-strong">
+							<span style="relative">Password must be at least 8 character long with number and alphabet lowercase and uppercase combination.</span>
+						</div>
 						<div class="ui-hint" id="hint-txt-password"><span>Password must be at least 1 character.</span></div>
-						<div class="ui-hint-warning" id="hint-txt-password-warning"><span>Password should be at least 8 character long with number and alphabet lowercase and uppercase combination, otherwise it will be very easy for others to guess your password.</span></div>
+						<div class="ui-hint-warning" id="hint-txt-password-warning">
+							<span style="relative">Password should be at least 8 character long with number and alphabet lowercase and uppercase combination, otherwise it will be very easy for others to guess your password.</span>
+						</div>
 					</div>
 				</div>
 				<div class="form-group">
@@ -133,21 +137,21 @@
 				
 				
 			</div>
-
-			<div class="ui-page" id="summary">
+			
+			<div class="ui-page jumbotron" id="summary">
 				<h1><span>Installation Summary</span></h1>
 				<p><span>This is our installation summary. Please proceed if you're agree. Beyond this point, the installer will make changes to your system and you can't go back.</span></p>
-
-				<span>Target device</span>: <b><span id="summary-target-device"></span></b><br/>
-				<span>Target partition</span>: <b><span id="summary-target-partition"></span></b><br/>
-				<span>Computer name</span>: <b><span id="summary-computer-name"></span></b><br/>
-				<span>Full name</span>: <b><span id="summary-full-name"></span></b><br/>
-				<span>User name</span>: <b><span id="summary-user-name"></span></b><br/>
-				<span>Automatically login</span>: <b><span id="summary-auto-login"></span></b><br/>
-
+				<!--div class="alertaris-info"-->
+					<span>Target device</span>: <b><span id="summary-target-device" class="alertaris-info-text"></span></b><br/>
+					<span>Target partition</span>: <b><span id="summary-target-partition" class="alertaris-info-text"></span></b><br/>
+					<span>Computer name</span>: <b><span id="summary-computer-name" class="alertaris-info-text"></span></b><br/>
+					<span>Full name</span>: <b><span id="summary-full-name" class="alertaris-info-text"></span></b><br/>
+					<span>User name</span>: <b><span id="summary-user-name" class="alertaris-info-text"></span></b><br/>
+					<span>Automatically login</span>: <b><span id="summary-auto-login" class="alertaris-info-text"></span></b><br/>
+				<!--/div-->
 			</div>
-
-			<div class="ui-page" id="installation" data-toolbar="no">
+			
+			<div class="ui-page jumbotron" id="installation" data-toolbar="no">
 				<h1><span>Installation</span></h1>
 				<p><span>Please wait a moment while the installation is applied to your system</span></p>
 
@@ -157,12 +161,13 @@
 			<div class="ui-page" id="done" data-toolbar="no">
 				<h1><span>Done</span></h1>
 				<p><span>Your system is ready, now please continue to reboot into your newly installed system</span></p>
-        <a class="button btn btn-primary btn-shutdown"><span>Continue using Live CD</span></a>
+				<a class="button btn btn-primary btn-shutdown">Continue using Live CD</a>
+				<!--a class="button btn-shutdown"><span>Continue using Live CD</span></a-->
 				<a class="button" id="btn-reboot"><span>Reboot to newly installed system</span></a>
 			</div>
 
 			<span class="ui-advanced-mode-text-hidden"  id="ui-advanced-mode-text">ADVANCED MODE</span>
-
+			
 			<nav class="toolbar" id="toolbar">
 				<div class="ui-switch-mode">
 					<div id="ui-switch-mode-button"></div>
@@ -173,19 +178,20 @@
 				<div class="ui-navigation-buttons">
 					<!--a class="ui-button-toolbar previous ui-button-toolbar-enabled" id="prev"><span>Previous</span></a-->
 					<!--a class="ui-button-toolbar next ui-button-toolbar-disabled" id="next"><span>Next</span></a-->
-          <button type="button" class="btn btn-info" id="prev"><span>Previous</span></button>
-            <button type="button" class="btn btn-success" id="next"><span>Next</span></button>
+					<button type="button" class="btn btn-info" id="prev">Previous</button>
+					<button type="button" class="btn btn-success" id="next">Next</button>
 				</div>
 			</nav>
-
-			<div class="ui-page" id="error" data-toolbar="no">
+			
+			<div class="ui-page jumbotron" id="error" data-toolbar="no">
 				<h1><span>Sorry,</span></h1>
 				<p><span>There is an error during installation. Please see the log below, you can capture this or just send the /var/log/blankon-installer.log file to blankon-dev@googlegroups.com</span></p>
-				<a class="button btn-shutdown"><span>Exit installation and continue using LiveCD</span></a>
+				<a class="btn btn-info btn-shutdown"><span>Exit installation and continue using LiveCD</span></a>
 				<p/>
-				<textarea rows="20" cols="90" id="log">Please wait while loading the log...</textarea>
+				<br>
+				<textarea rows="12" cols="90" id="log" readonly style="resize:none;" onclick="return gulungan()">Please wait while loading the log...</textarea>
 			</div>
-		</div>
-
+			
+		</div><!--EndBASE-->
 	</body>
 </html>

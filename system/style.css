@@ -49,7 +49,7 @@ nav.toolbar {
 }
 
 .ui-animation-slide {
-    -webkit-transition: all 300ms ease-in-out;
+    -webkit-transition: all 700ms ease-in-out;
 }
 
 div.ui-page {
@@ -328,8 +328,9 @@ div.device {
 
 .ui-partition-selected {
     background-color: #505050;
-    
     border-color: white;
+    background-color:#75caeb;
+    border-color:#5fc1e8;
 	
 }
 
@@ -337,8 +338,53 @@ div.device {
 content:"\2714   ";
 float: right;        
 	text-align: center;
-	font-size: 1.5em;
+	font-size: 1.5em;	
+}
+
+.ui-partition-aris-primary {
+	background-color:#158cba;
+	border-color:#127ba3;
+	color:#ffffff;
 	
+	border: 1px solid #777;
+	padding: 0 1.5em;
+	margin: 0.5em;
+	font: bold 1em/2em Arial, Helvetica;
+	text-decoration: none;
+	text-shadow: 0 1px 0 rgba(255,255,255,.8);
+	-moz-border-radius: .2em;
+	-webkit-border-radius: .2em;
+	border-radius: .2em;
+	-moz-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+	-webkit-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+	box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+    	cursor: pointer;
+}
+.ui-partition-aris-info {
+	color:#ffffff;
+	background-color:#75caeb;
+	border-color:#5fc1e8;
+	
+	border: 1px solid #777;
+	padding: 0 1.5em;
+	margin: 0.5em;
+	font: bold 1em/2em Arial, Helvetica;
+	text-decoration: none;
+	text-shadow: 0 1px 0 rgba(255,255,255,.8);
+	-moz-border-radius: .2em;
+	-webkit-border-radius: .2em;
+	border-radius: .2em;
+	-moz-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+	-webkit-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+	box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+    	cursor: pointer;
+}
+
+.ui-partition-selected-aris:after {
+content:"\2714   ";
+float: right;        
+	text-align: center;
+	font-size: 1.5em;	
 }
 
 
@@ -542,8 +588,10 @@ div#base {
     position: fixed;
     top: 0px;
     opacity: 1;
+    border:1px solid black;
+    border-radius:5px;
     -webkit-transition: opacity 1s ease-out;
-    background-image: -webkit-linear-gradient(bottom, rgb(163,163,163) 9%, rgb(199,199,199) 55%);
+    !background-image: -webkit-linear-gradient(bottom, rgb(163,163,163) 9%, rgb(199,199,199) 55%);
 }
 
 div#error-frame {
@@ -619,5 +667,17 @@ textarea.log {
     100% { border-top: 3px solid black; }
 }
 
+.alertaris-info{
+background-color: rgb(217, 237, 247);
+/* RGBa with 0.6 opacity */
+background-color: rgba(217, 237, 247, 0.6);
+}
+.alertaris-info-text{
+color:#AF4415;
+}
 
-
+.kurungan-aris{
+background-color: rgb(238, 238, 238);
+/* RGBa with 0.6 opacity */
+!background-color: rgba(238, 238, 238, 0.6);
+}

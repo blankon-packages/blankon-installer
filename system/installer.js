@@ -81,7 +81,7 @@ var install = (function(){
     // Selects partition
     var selectPartition = function() {
         $("div.ui-partition-selected").attr("class", "ui-partition");
-        $(this).attr("class", "ui-partition ui-partition-selected");
+        $(this).attr("class", "ui-partition-aris-info ui-partition-selected");
 
         validateCurrentPage();
     }
@@ -265,12 +265,7 @@ var install = (function(){
         return true;
     }
 
-    var goNextPage = function(e) {
-	var disabled = $(this).hasClass("ui-button-toolbar-disabled");
-        if (disabled) {
-	  e.preventDefault();
-          return;
-	}
+    var goNextPage = function() {
         if (canGoNextPage()) {
             previousPage = currentPage;
             currentPage ++;
@@ -551,25 +546,9 @@ var install = (function(){
         selection.show();
         var zone = $("#opt-zone").val();
         var data = Utils.getTimezones(zone);
-        var prioritizedCities = ["Jakarta", "Jayapura", "Ujung Pandang", "Pontianak"];
-	
-	for (var j = 0; j < prioritizedCities.length; j++) {
-	  var city = prioritizedCities[j];
-          var name = city;
-          if (city == "Ujung Pandang") {
-	    name = "Makassar";
-	  } 
-	  var opt = $("<option>").text(name).attr("value", zone + "/" + city);
-          selection.append(opt);
-        }
-
         for (var i = 0; i < data.length; i ++) {
-            var city = data[i].replace("_", " ");
-            if ( city.indexOf(prioritizedCities) >= 0 ) {
-		continue;
-            }
             var opt = $("<option>").
-                text(city).
+                text(data[i].replace("_", " ")).
                 attr("value", zone + "/" + data[i]);
             selection.append(opt);
         }
@@ -662,7 +641,6 @@ var install = (function(){
         setupButtons();
         setupForm();
         setupAjax();
-        changeZone();
         goNextPage();
         applyMode();
         translate();
