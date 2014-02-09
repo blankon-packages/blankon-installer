@@ -6,6 +6,8 @@ entity icons : http://www.codemonkeyjack.com/EntitiesChart.html
 body {
     /*background-color: #dedede;*/
     background-color: #F8F8F8;
+    background: url("texture.jpg");
+    background-repeat: repeat;
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
     font-family: "Sans";
@@ -53,6 +55,8 @@ nav.toolbar {
 }
 
 div.ui-page {
+    background: url("texture.jpg");
+    background-repeat: repeat;
     top: 60px;
     position: fixed;
     overflow-y: auto;
