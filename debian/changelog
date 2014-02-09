@@ -1,3 +1,12 @@
+blankon-installer (0.1.54) UNRELEASED; urgency=medium
+
+  * add system/logo.png
+  * add system/texture.jpg
+  * modified system/index.html Personalization form fields 
+  * update system/Makefile.am
+
+ -- mijortsa <azis.astrojim@surabaya.di.blankon.in>  Sun, 09 Feb 2014 22:49:40 +0800
+
 blankon-installer (0.1.53) suroboyo; urgency=medium
 
   * redesign by aris eko 
