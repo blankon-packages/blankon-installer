@@ -221,10 +221,6 @@ var install = (function(){
         if (withTransition) {
             var id = incoming.id;
             var f = "preparePage" + id.charAt(0).toUpperCase() + id.slice(1);
-            // setup function that will be run after transition is finished
-            if (typeof _[f] === "function") {
-                incoming.addEventListener("webkitTransitionEnd", _[f], true);
-            }
             // apply the pages with the animation styles
             if (outgoing != null) {
                 $(outgoing).addClass(outgoingAnimationName + outgoingAnimationSuffix).one("webkitAnimationEnd", function() {
@@ -234,6 +230,10 @@ var install = (function(){
                 $(incoming).addClass("active");
                 $(incoming).addClass(animationName + animationSuffix + " active").one("webkitAnimationEnd", function() {
                   $(this).removeClass(animationName + animationSuffix);
+                  if (typeof _[f] === "function") {
+                    // setup function that will be run after transition is finished
+                    _[f]();
+                  }
                 });
             }
         }
