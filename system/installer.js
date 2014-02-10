@@ -233,7 +233,7 @@ var install = (function(){
                 $(outgoing).removeClass(animationName + animationSuffix);
                 $(incoming).addClass("active");
                 $(incoming).addClass(animationName + animationSuffix + " active").one("webkitAnimationEnd", function() {
-                  $(this).removeClass(AnimationName + AnimationSuffix);
+                  $(this).removeClass(animationName + animationSuffix);
                 });
             }
         }
@@ -260,6 +260,12 @@ var install = (function(){
     }
 
     var goNextPage = function() {
+        var disabled = $(this).hasClass("ui-button-toolbar-disabled");
+        if (disabled) {
+            e.preventDefault();
+            return;
+        }
+
         if (canGoNextPage()) {
             previousPage = currentPage;
             currentPage ++;
@@ -540,11 +546,28 @@ var install = (function(){
         selection.show();
         var zone = $("#opt-zone").val();
         var data = Utils.getTimezones(zone);
+        var prioritizedCities = ["Jakarta", "Jayapura", "Ujung Pandang", "Pontianak"];
+
+        for (var j = 0; j < prioritizedCities.length; j++) {
+          var city = prioritizedCities[j];
+          var name = city;
+          if (city == "Ujung Pandang") {
+            name = "Makassar";
+          } 
+          var opt = $("<option>").text(name).attr("value", zone + "/" + city);
+          selection.append(opt);
+          console.log("x");
+        }
+
         for (var i = 0; i < data.length; i ++) {
-            var opt = $("<option>").
-                text(data[i].replace("_", " ")).
-                attr("value", zone + "/" + data[i]);
-            selection.append(opt);
+          var city = data[i].replace("_", " ");
+          if (city.indexOf(prioritizedCities) >= 0) {
+            continue;
+          }
+          var opt = $("<option>").
+              text(city).
+              attr("value", zone + "/" + data[i]);
+          selection.append(opt);
         }
     }
 
@@ -634,6 +657,7 @@ var install = (function(){
         setupButtons();
         setupForm();
         setupAjax();
+        changeZone();
         goNextPage();
         applyMode();
         translate();
