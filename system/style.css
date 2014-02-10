@@ -65,7 +65,11 @@ div.ui-page {
     padding: 30px;
     padding-bottom: 120px;
     -webkit-box-sizing: border-box;
-    left: 12000px;
+    display: none;
+}
+
+.ui-page.active {
+    display: block;
 }
 
 label {

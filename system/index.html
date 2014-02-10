@@ -4,6 +4,7 @@
 		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width"/>
 		<link rel="stylesheet" href="bootstrap.min.css"/>
 		<link rel="stylesheet" href="style.css"/>
+		<link rel="stylesheet" href="animate.css"/>
 
 		<script type="text/javascript" src="jq.js">
 		</script>
@@ -20,7 +21,7 @@
 				</div>
 			</div>
 		 
-			<div class="ui-page form-horizontal jumbotron" id="first" data-toolbar="no">
+			<div class="ui-page active animated form-horizontal jumbotron" id="first" data-toolbar="no">
 				<h1><span>Welcome to BlankOn</span></h1>
 				<p><span>Welcome to BlankOn installation program. Please choose your language and region below to continue. If your choice is not on the list, you can choose the default values and set again later after the system is fully installed in the Settings application.</span></p>
 				<p>
@@ -64,7 +65,7 @@
 			</div>
 			
 			<!--Langkah Partisi-->
-			<div class="ui-page" id="target">
+			<div class="ui-page animated" id="target">
 				<h1><span>Installation Target</span></h1>
 				<div id="no_target" style="display:none"><span>Sorry, it seems that there is no device that we can install BlankOn into. Please attach a hard drive or flash disk before continuing. If you're running as normal user, try again running the installer as root.</span></div>
 				<div id="waiting_target"><span>Please wait while I scan your computer for available devices</span></div>
@@ -76,7 +77,7 @@
 		
 			<!--Langkah personalization-->
 			
-			<div class="ui-page form-horizontal jumbotron" id="personalization">
+			<div class="ui-page animated form-horizontal jumbotron" id="personalization">
 				
 				
 				<!--Cobaan-->
@@ -138,7 +139,7 @@
 				
 			</div>
 			
-			<div class="ui-page jumbotron" id="summary">
+			<div class="ui-page animated jumbotron" id="summary">
 				<h1><span>Installation Summary</span></h1>
 				<p><span>This is our installation summary. Please proceed if you're agree. Beyond this point, the installer will make changes to your system and you can't go back.</span></p>
 				<!--div class="alertaris-info"-->
@@ -151,14 +152,14 @@
 				<!--/div-->
 			</div>
 			
-			<div class="ui-page jumbotron" id="installation" data-toolbar="no">
+			<div class="ui-page animated jumbotron" id="installation" data-toolbar="no">
 				<h1><span>Installation</span></h1>
 				<p><span>Please wait a moment while the installation is applied to your system</span></p>
 
 				<span id="current-step">Preparing</span>...
 				<div class="ui-progress-bar-enclosure"><div id="progress-bar"><div class="ui-spinner"></div></div></div>
 			</div>
-			<div class="ui-page" id="done" data-toolbar="no">
+			<div class="ui-page animated" id="done" data-toolbar="no">
 				<h1><span>Done</span></h1>
 				<p><span>Your system is ready, now please continue to reboot into your newly installed system</span></p>
 				<a class="button btn btn-primary btn-shutdown">Continue using Live CD</a>
@@ -184,7 +185,7 @@
 				</div>
 			</nav>
 			
-			<div class="ui-page jumbotron" id="error" data-toolbar="no">
+			<div class="ui-page animated jumbotron" id="error" data-toolbar="no">
 				<h1><span>Sorry,</span></h1>
 				<p><span>There is an error during installation. Please see the log below, you can capture this or just send the /var/log/blankon-installer.log file to blankon-dev@googlegroups.com</span></p>
 				<a class="btn btn-info btn-shutdown"><span>Exit installation and continue using LiveCD</span></a>

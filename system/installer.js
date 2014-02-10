@@ -81,7 +81,7 @@ var install = (function(){
     // Selects partition
     var selectPartition = function() {
         $("div.ui-partition-selected").attr("class", "ui-partition");
-        $(this).attr("class", "ui-partition-aris-info ui-partition-selected");
+        $(this).attr("class", "ui-partition ui-partition-selected");
 
         validateCurrentPage();
     }
@@ -188,6 +188,10 @@ var install = (function(){
     var displayPage = function() {
         // We reverse animation if going back through the list
         var reverse = (previousPage > currentPage);
+        var animationName = "bounceIn";
+        var outgoingAnimationName = "bounceOut";
+        var animationSuffix = reverse ? "Left" : "Right";
+        var outgoingAnimationSuffix = reverse ? "Right" : "Left";
         var withTransition = true;
         var pages = $(".ui-page");
         var outgoing = null;
@@ -204,8 +208,6 @@ var install = (function(){
                     break;
                 }
             }
-            reverse = (previousPage > currentPage);
-                console.log(arguments[0]);
         } else {
         // get the pages we're interested in
             outgoing = (currentPage < 0) ?
@@ -214,13 +216,6 @@ var install = (function(){
                             pages.get(currentPage + 1) :
                             pages.get(currentPage - 1));
             incoming = pages.get(currentPage);
-        }
-
-        // put incoming page way outside the screen on the right
-        if (withTransition) {
-            $(incoming).removeClass("ui-animation-slide");
-            var prefix = reverse ? "-" : "";
-            $(incoming).css("left", prefix + window.outerWidth + "px");
         }
 
         if (withTransition) {
@@ -232,17 +227,16 @@ var install = (function(){
             }
             // apply the pages with the animation styles
             if (outgoing != null) {
-                $(outgoing).addClass("ui-animation-slide");
-                $(incoming).addClass("ui-animation-slide");
+                $(outgoing).addClass(outgoingAnimationName + outgoingAnimationSuffix).one("webkitAnimationEnd", function() {
+                  $(this).removeClass(outgoingAnimationName + outgoingAnimationSuffix + " active");
+                });
+                $(outgoing).removeClass(animationName + animationSuffix);
+                $(incoming).addClass("active");
+                $(incoming).addClass(animationName + animationSuffix + " active").one("webkitAnimationEnd", function() {
+                  $(this).removeClass(AnimationName + AnimationSuffix);
+                });
             }
         }
-
-        // start the animation
-        if (outgoing != null) {
-            var prefix = reverse ? "" : "-";
-            $(outgoing).css("left", prefix + window.outerWidth + "px");
-        }
-        $(incoming).css("left", "0px");
 
         // show navigation toolbar when necessary
         if ($(incoming).attr("data-toolbar") == "no") {
@@ -637,7 +631,6 @@ var install = (function(){
     }
 
     var init = function() {
-        $(".ui-page").css("left", "40000px");
         setupButtons();
         setupForm();
         setupAjax();
