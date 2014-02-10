@@ -1,3 +1,9 @@
+blankon-installer (0.1.56) suroboyo; urgency=low
+
+  * Re-style
+
+ -- Mahyuddin Ramli <yudi.al@gmail.com>  Mon, 10 Feb 2014 23:12:55 +0700
+
 blankon-installer (0.1.55) suroboyo; urgency=medium
 
   * modified system/style.css:
