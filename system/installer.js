@@ -65,10 +65,10 @@ var install = (function(){
         var p = $(".ui-page").get(currentPage).id;
         var f = "canContinue" + p.charAt(0).toUpperCase() + p.slice(1);
        
-        $("#next").addClass("ui-button-toolbar-disabled").removeClass("ui-button-toolbar-enabled");
+        $("#next").addClass("disabled").removeClass("ui-button-toolbar-enabled");
         if (typeof _[f] === "function") {
             if (_[f]() == true) {
-                $("#next").addClass("ui-button-toolbar-enabled").removeClass("ui-button-toolbar-disabled");
+                $("#next").addClass("ui-button-toolbar-enabled").removeClass("disabled");
             }
         }
     }
@@ -260,7 +260,7 @@ var install = (function(){
     }
 
     var goNextPage = function() {
-        var disabled = $(this).hasClass("ui-button-toolbar-disabled");
+        var disabled = $(this).hasClass("disabled");
         if (disabled) {
             e.preventDefault();
             return;

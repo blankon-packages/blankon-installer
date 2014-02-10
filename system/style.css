@@ -4,10 +4,7 @@ entity icons : http://www.codemonkeyjack.com/EntitiesChart.html
 */
 
 body {
-    /*background-color: #dedede;*/
-    background-color: #F8F8F8;
-    background: url("texture.jpg");
-    background-repeat: repeat;
+    background-color: #000;
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
     font-family: "Sans";
@@ -15,7 +12,12 @@ body {
 }
 
 img#logo {
-    float: right; 
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  margin: 0px;
+  padding: 0px;
+  vertical-align: middle;
 }
 
 div.topbar {
@@ -155,93 +157,6 @@ select{
 #ui-switch-mode-button:hover {
     -webkit-box-shadow: 0px 0px 10px #eeeeee;
 }
-
-a.ui-button-toolbar-enabled {
-  
-}
-
-a.ui-button-toolbar-disabled {
-	background-image: -webkit-linear-gradient(top, #555, #ccc);
-	background-image: -moz-linear-gradient(top, #555, #ccc);
-	background-image: -ms-linear-gradient(top, #555, #ccc);
-	background-image: -o-linear-gradient(top, #555, #ccc);
-	background-image: linear-gradient(top, #555, #ccc); 
-        display: none;
-}
-
-a.ui-button-toolbar {
-	cursor: pointer;
-	display: inline-block;
-	white-space: nowrap;
-	background-color: #000;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ccc));
-	background-image: -webkit-linear-gradient(top, #eee, #ccc);
-	background-image: -moz-linear-gradient(top, #eee, #ccc);
-	background-image: -ms-linear-gradient(top, #eee, #ccc);
-	background-image: -o-linear-gradient(top, #eee, #ccc);
-	background-image: linear-gradient(top, #eee, #ccc);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#cccccc');
-	border: 1px solid #777;
-	padding: 0 1.5em;
-	margin: 0.5em;
-	font: bold 1em/2em Arial, Helvetica;
-	text-decoration: none;
-	color: #333;
-	text-shadow: 0 1px 0 rgba(255,255,255,.8);
-	-moz-border-radius: .2em;
-	-webkit-border-radius: .2em;
-	border-radius: .2em;
-	-moz-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
-	-webkit-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
-	box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
-}
-}
-a.ui-button-toolbar:hover
-{
-	background-color: #ddd;        
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#ddd));
-	background-image: -webkit-linear-gradient(top, #fafafa, #ddd);
-	background-image: -moz-linear-gradient(top, #fafafa, #ddd);
-	background-image: -ms-linear-gradient(top, #fafafa, #ddd);
-	background-image: -o-linear-gradient(top, #fafafa, #ddd);
-	background-image: linear-gradient(top, #fafafa, #ddd);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#fafafa', EndColorStr='#dddddd');        
-}
-
-a.ui-button-toolbar:active
-{
-	-moz-box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
-	-webkit-box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
-	box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
-	position: relative;
-	top: 1px;
-}
-
-a.ui-button-toolbar:focus
-{
-	outline: 0;
-	background: #fafafa;
-}      
-
-a.ui-button-toolbar:before
-{
-	background: #ccc;
-	background: rgba(0,0,0,.1);
-	float: left;        
-	width: 1em;
-	text-align: center;
-	font-size: 1.5em;
-	margin: 0 1em 0 -1em;
-	padding: 0 .2em;
-	-moz-box-shadow: 1px 0 0 rgba(0,0,0,.5), 2px 0 0 rgba(255,255,255,.5);
-	-webkit-box-shadow: 1px 0 0 rgba(0,0,0,.5), 2px 0 0 rgba(255,255,255,.5);
-	box-shadow: 1px 0 0 rgba(0,0,0,.5), 2px 0 0 rgba(255,255,255,.5);
-	-moz-border-radius: .15em 0 0 .15em;
-	-webkit-border-radius: .15em 0 0 .15em;
-	border-radius: .15em 0 0 .15em;
-        pointer-events: none;        
-}
-
 
 div.steps {
     margin-top: 10px;
@@ -528,69 +443,8 @@ a.button:before
         pointer-events: none;        
 }
 
-/* Hexadecimal entities for the icons */
-
-a.add:before
-{
-	content: "\271A";
-}
-
-a.edit:before
-{
-	content: "\270E";        
-}
-
-a.delete:before
-{
-	content: "\2718";        
-}
-
-a.save:before
-{
-	content: "\2714";        
-}
-
-a.email:before
-{
-	content: "\2709";        
-}
-
-a.like:before
-{
-	content: "\2764";        
-}
-
-a.install:before
-{
-	content: "\279F";
-}
-
-a.next:before
-{
-	content: "\21D2";
-}
-
-a.previous:before
-{
-	content: "\21D0";
-}
-
-a.star:before
-{
-	content: "\2605";
-}
-
-a.spark:before
-{
-	content: "\2737";
-}
-
-a.play:before
-{
-	content: "\25B6";
-} 
-
 div#base {
+    background-color: #fff;
     width: 100%;
     height: 100%;
     position: fixed;
@@ -675,17 +529,29 @@ textarea.log {
     100% { border-top: 3px solid black; }
 }
 
-.alertaris-info{
-background-color: rgb(217, 237, 247);
-/* RGBa with 0.6 opacity */
-background-color: rgba(217, 237, 247, 0.6);
+.debug {
+  border: 1px solid red;
 }
-.alertaris-info-text{
-color:#AF4415;
+.navbar {
+  height: 60px;
+  background: rgb(111, 179, 224);
+  border: none;
+  border-radius: 0px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  z-index: 2;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
 }
 
-.kurungan-aris{
-background-color: rgb(238, 238, 238);
-/* RGBa with 0.6 opacity */
-!background-color: rgba(238, 238, 238, 0.6);
+.navbar-bg {
+  height: 60px;
+  background: #000;
+  z-index: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
 }

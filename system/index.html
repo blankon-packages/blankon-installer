@@ -13,12 +13,10 @@
 	</head>
 	<body>
 		<div id="base">
-			<div class="navbar navbar-inner" style="background-color:#222222;" role="navigation">
-				<div class="container">
-					<div class="navbar-header navbar-right">
-						<img src="logo.png" id="logo"/>
-					</div>
-				</div>
+			<div class="navbar-bg">
+      </div>
+			<div class="navbar"  role="navigation">
+						<img src="blankon.png" id="logo" class=""/>
 			</div>
 		 
 			<div class="ui-page active animated form-horizontal jumbotron" id="first" data-toolbar="no">
@@ -26,7 +24,7 @@
 				<p><span>Welcome to BlankOn installation program. Please choose your language and region below to continue. If your choice is not on the list, you can choose the default values and set again later after the system is fully installed in the Settings application.</span></p>
 				<p>
 					<div class="form-group">
-						<label class="control-label">Language</label>
+            <label class="control-label"><span>Language</span></label>
 						<div class="col-sm-2">
 							<select class="form-control" id="opt-language"></select>
 						</div>
@@ -80,7 +78,6 @@
 			<div class="ui-page animated form-horizontal jumbotron" id="personalization">
 				
 				
-				<!--Cobaan-->
 				<h1><span>Personalization</span></h1>
 				<p><span>Please enter your personalization preference below..</span></p>
 				<div class="ui-advanced-options ui-advanced-options-hidden">
@@ -101,14 +98,14 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="Your-Name">Your Name</label>
+          <label for="Your-Name"><span>Your Name</span></label>
 					<div class="col-sm-4">
 						<input type="text" class="form-control" id="txt-full-name" placeholder="Your Name">
 						<div class="ui-hint" id="hint-txt-computer-name"><span>Computer name must be at least 1 character long and started with an alphabet. It must be written in lowercase ascii without any space.</span></div>
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="User-name">User Name</label>
+          <label for="User-name"><span>User Name</span></label>
 					<div class="col-sm-4">
 						<input type="text" class="form-control" id="txt-user-name">
 						<div class="ui-hint" id="hint-txt-user-name"><span>Username must be at least 1 character long and started with an alphabet. It must be written in lowercase ascii without any space.</span></div>
@@ -178,10 +175,8 @@
 					<span id="ui-switch-mode-advanced-text" style="display:none">Click to switch to Advanced Mode</span>
 				</div>
 				<div class="ui-navigation-buttons">
-					<!--a class="ui-button-toolbar previous ui-button-toolbar-enabled" id="prev"><span>Previous</span></a-->
-					<!--a class="ui-button-toolbar next ui-button-toolbar-disabled" id="next"><span>Next</span></a-->
-					<button type="button" class="btn btn-info" id="prev">Previous</button>
-					<button type="button" class="btn btn-success" id="next">Next</button>
+					<a class="btn btn-success" id="prev"><span>Previous</span></a>
+					<a class="btn btn-success " id="next"><span>Next</span></a>
 				</div>
 			</nav>
 			
