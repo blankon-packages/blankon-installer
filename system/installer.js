@@ -142,13 +142,11 @@ var install = (function(){
             $("#waiting_target").hide();
             $("#no_target").show();
         }
-        cleanUpListener(e);
     } 
 
     _.preparePagePersonalization = function(e) {
         var p = $("div.ui-partition-selected");
         $("#txt-computer-name").focus();    
-        cleanUpListener(e);
     }
 
     _.preparePageSummary = function(e) {
@@ -159,19 +157,11 @@ var install = (function(){
         $("#summary-computer-name").text($("#txt-computer-name").val());
         $("#summary-user-name").text($("#txt-user-name").val());
         $("#summary-auto-login").text(autoLogin ? "Yes" : "No");
-        cleanUpListener(e);
     }
 
     _.preparePageInstallation = function(e) {
         $("nav.toolbar").css("bottom", "-" + $("nav.toolbar").height() + "px"); 
         setTimeout(sendInstallationData, 1000);
-        cleanUpListener(e);
-    }
-
-    var cleanUpListener = function(e) {
-        var id = e.target.id;
-        var f = "preparePage" + id.charAt(0).toUpperCase() + id.slice(1);
-        e.target.removeEventListener("webkitTransitionEnd", _[f], true);
     }
 
     // Creates string with positional parameters
