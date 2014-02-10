@@ -713,6 +713,9 @@ public class Installer : WebView {
         settings.enable_file_access_from_file_uris = true;
         settings.enable_universal_access_from_file_uris = true;
         // settings.enable_developer_extras = true;
+        if (Environment.get_variable("B_I_DEBUG") == null) {
+            settings.enable_default_context_menu = false;
+        }
         set_settings(settings);
 
         resource_request_starting.connect((frame, resource, request, response) => {
