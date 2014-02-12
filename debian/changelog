@@ -1,3 +1,9 @@
+blankon-installer (0.1.57) suroboyo; urgency=low
+
+  * system/Makefile.am add animate.css 
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Wed, 12 Feb 2014 08:16:54 +0700
+
 blankon-installer (0.1.56) suroboyo; urgency=low
 
   * Re-style
