@@ -1,3 +1,9 @@
+blankon-installer (0.1.59) suroboyo; urgency=low
+
+  * Run nice option as default user
+
+ -- Mahyuddin Ramli <dotovr@di.blankon.in>  Thu, 13 Feb 2014 22:25:59 +0700
+
 blankon-installer (0.1.58) suroboyo; urgency=low
 
   * Changes: Enclose string with span so it can be translated
