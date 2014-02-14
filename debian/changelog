@@ -1,3 +1,9 @@
+blankon-installer (0.1.60) suroboyo; urgency=low
+
+  * Changes: Fix permission access ~/.local directory
+
+ -- Mahyuddin Ramli <yudi.al@gmail.com>  Fri, 14 Feb 2014 16:53:47 +0700
+
 blankon-installer (0.1.59) suroboyo; urgency=low
 
   * Run nice option as default user
