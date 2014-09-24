@@ -1,3 +1,10 @@
+blankon-installer (0.1.61) tambora; urgency=low
+
+  * Make system read/write
+    - Add rw in GRUB_CMDLINE_LINUX_DEFAULT
+    
+ -- Mahyuddin <yudi.al@gmail.com>  Wed, 24 Sep 2014 22:08:18 +0700
+
 blankon-installer (0.1.60) suroboyo; urgency=low
 
   * Changes: Fix permission access ~/.local directory
