@@ -690,7 +690,7 @@ public class Installation : GLib.Object {
 
 public class Installer : WebView {
     string translate_uri (string old) {
-        var uri = old.replace("http://system", "file://" + Config.SYSTEM_PATH + "");
+        var uri = old.replace("http://system", "file://" + Config.SYSTEM_PATH + "/");
         return uri;
     }
 
@@ -707,15 +707,17 @@ public class Installer : WebView {
         var uri = "file://%s".printf(Utils.get_icon_path (old.replace("theme://", "")));
         return uri;
     }
+    
+    unowned string debug = GLib.Environment.get_variable("DEBUG");
 
     public Installer () {
         var settings = new WebSettings();
+        if (debug == "1") {
+          settings.enable_developer_extras = true;
+          web_inspector.inspect_web_view.connect(getInspectorView);
+        }
         settings.enable_file_access_from_file_uris = true;
         settings.enable_universal_access_from_file_uris = true;
-        // settings.enable_developer_extras = true;
-        if (Environment.get_variable("B_I_DEBUG") == null) {
-            settings.enable_default_context_menu = false;
-        }
         set_settings(settings);
 
         resource_request_starting.connect((frame, resource, request, response) => {
@@ -735,6 +737,24 @@ public class Installer : WebView {
             Parted.setup_js_class ((JSCore.GlobalContext) context);
             Installation.setup_js_class ((JSCore.GlobalContext) context);
         });
+    }
+    
+    private unowned WebView getInspectorView(WebView inspectedView) {
+        Window window = new Window();
+        WebView webview = new WebView();
+        ScrolledWindow scrolled_window = new ScrolledWindow(null, null);
+        scrolled_window.set_policy(PolicyType.AUTOMATIC, PolicyType.AUTOMATIC);
+        scrolled_window.add(webview);
+        window.add(scrolled_window);
+        window.title = "Inspector";
+        window.set_default_size(640, 480);
+        window.show_all();
+        window.delete_event.connect(() => {
+            webview.web_inspector.close();
+            return false;
+        });
+        unowned WebView handle = webview;
+        return handle;
     }
 
     public void start() {

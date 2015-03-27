@@ -1,3 +1,9 @@
+blankon-installer (0.1.62) tambora; urgency=low
+
+  * New upstream update 
+
+ -- Mahyuddin <yudi.al@gmail.com>  Fri, 27 Mar 2015 23:16:01 +0700
+
 blankon-installer (0.1.61) tambora; urgency=low
 
   * Make system read/write
