@@ -1,3 +1,9 @@
+blankon-installer (0.1.64) tambora; urgency=low
+
+  * Add missing Makefile
+
+ -- princeofgiri <princeofgiri@di.blankon.in>  Sat, 04 Apr 2015 08:02:13 +0700
+
 blankon-installer (0.1.63) tambora; urgency=low
 
   * New UI from upstream
