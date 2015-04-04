@@ -1,3 +1,9 @@
+blankon-installer (0.1.63) tambora; urgency=low
+
+  * New UI from upstream
+  
+ -- princeofgiri <princeofgiri@di.blankon.in>  Sat, 04 Apr 2015 07:01:41 +0700
+
 blankon-installer (0.1.62) tambora; urgency=low
 
   * New upstream update 
