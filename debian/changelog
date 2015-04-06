@@ -1,33 +1,8 @@
-blankon-installer (0.1.70) tambora; urgency=medium
-
-  * Rebuild
-
- -- Syai Mif <syaimif@di.blankon.in>  Sat, 04 Apr 2015 11:56:04 +0700
-
-blankon-installer (0.1.64) tambora; urgency=low
-
-  * Add missing Makefile
-
- -- princeofgiri <princeofgiri@di.blankon.in>  Sat, 04 Apr 2015 08:02:13 +0700
-
-blankon-installer (0.1.63) tambora; urgency=low
-
-  * New UI from upstream
-  
- -- princeofgiri <princeofgiri@di.blankon.in>  Sat, 04 Apr 2015 07:01:41 +0700
-
-blankon-installer (0.1.62) tambora; urgency=low
-
-  * New upstream update 
-
- -- Mahyuddin <yudi.al@gmail.com>  Fri, 27 Mar 2015 23:16:01 +0700
-
 blankon-installer (0.1.61) tambora; urgency=low
 
-  * Make system read/write
-    - Add rw in GRUB_CMDLINE_LINUX_DEFAULT
-    
- -- Mahyuddin <yudi.al@gmail.com>  Wed, 24 Sep 2014 22:08:18 +0700
+  * Integrasi New UI 
+
+ -- Mahyuddin <yudi.al@gmail.com>  Mon, 06 Apr 2015 12:54:39 +0700
 
 blankon-installer (0.1.60) suroboyo; urgency=low
 
