@@ -1,3 +1,10 @@
+blankon-installer (0.1.73) tambora; urgency=low
+
+  * Update UI
+  * Build-depends: replace libparted0-dev with libparted-dev
+
+ -- Mahyuddin <yudi.al@gmail.com>  Wed, 29 Apr 2015 13:13:58 +0700
+
 blankon-installer (0.1.72) tambora; urgency=medium
 
   * Update Libparted_2
