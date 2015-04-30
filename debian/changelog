@@ -1,3 +1,9 @@
+blankon-installer (0.1.74) tambora; urgency=low
+
+  * fix UI logic
+
+ -- Mijortsa <azis.astrojim@surabaya.di.blankon.in>  Fri, 01 May 2015 05:27:34 +0700
+
 blankon-installer (0.1.73) tambora; urgency=low
 
   * Update UI
