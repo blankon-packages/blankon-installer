@@ -1,3 +1,9 @@
+blankon-installer (0.1.75) tambora; urgency=low
+
+  * Create partition function
+
+ -- Mahyuddin <yudi.al@gmail.com>  Fri, 01 May 2015 11:09:18 +0700
+
 blankon-installer (0.1.74) tambora; urgency=low
 
   * fix UI logic
