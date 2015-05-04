@@ -265,39 +265,38 @@ public class Installation : GLib.Object {
     }
     
     void do_partition() {
-        var d = Parted.get_devices (true); // Only read from cache to have a identical list with 
-                                           // the data obtained previously
-
-        var inconsistent = false;
-
-        if (d != null && device > d.size) {
-            inconsistent = true;
-        } else {
-            if (d.get (device).partitions != null 
-                && partition > d.get (device).partitions.size) {
-                inconsistent = true;
-            }
-        }
-
-        if (inconsistent) {
-            step = Step.DONE;
-            last_step = Step.DONE;
-            state = State.ERROR;
-            description = "Inconsistent partition record";
-            return;
-        }
-        
-        var partitions = d.get (device).partitions;
-        device_path = d.get (device).get_path ();
-        description = "Partitioning";
-        step = Step.PARTITION; 
         
         if (advancedMode == true) {
-            Device device = new Device.from_name (device_path);
-            var can_continue = false;
-            Log.instance().log ("Enter advanced partitioning");
-            Log.instance().log (steps);
+            /* var d = Parted.get_devices (); */ 
+    
+            /* var inconsistent = false; */
+    
+            /* if (d != null && device > d.size) { */
+            /*     inconsistent = true; */
+            /* } else { */
+            /*     if (d.get (device).partitions != null */ 
+            /*         && partition > d.get (device).partitions.size) { */
+            /*         inconsistent = true; */
+            /*     } */
+            /* } */
+    
+            /* if (inconsistent) { */
+            /*     step = Step.DONE; */
+            /*     last_step = Step.DONE; */
+            /*     state = State.ERROR; */
+            /*     description = "Inconsistent partition record"; */
+            /*     return; */
+            /* } */
             
+            /* var partitions = d.get (device).partitions; */
+            /* device_path = d.get (device).get_path (); */
+            Device xdevice = new Device.from_name ("/dev/sda");
+            description = "Partitioning";
+            step = Step.PARTITION;
+ 
+            var can_continue = false;
+            Log.instance().log ("Enter advanced partitioning ");
+            Log.instance().log (steps);
             // split steps parameter to an array
             // this stepsArray is contain step that should be done in partitioning
             // if a step has root mountPoint option, it should return the partition id to partition_path variable;
@@ -309,24 +308,64 @@ public class Installation : GLib.Object {
               
               switch (splittedParams[0]) {
               case  "create":
-                  uint64 start = int.parse (splittedParams[3].split("-")[0]) * 4096;
-                  uint64 end = int.parse (splittedParams[3].split("-")[1]) * 4096;
+                  var range = splittedParams[3].split("-");
+                  Log.instance().log ("range_start :" + range[0]);
+                  Log.instance().log ("range_start :" + range[1]);
                   var mount = "none";
                   if (splittedParams[4] == "root" || splittedParams[4] == "home") {
                    mount = splittedParams[4]; 
                   }
-                  var new_partition = device.create_partition (start, end,
+                  var new_partition = xdevice.create_partition (uint64.parse (range[0]), uint64.parse (range[1]),
                                                            splittedParams[2], splittedParams[1], mount);
-                  
+                  Log.instance().log ("newly created " + new_partition.to_string ());
+                  if (splittedParams[4] == "root") {
+                      Log.instance().log ("root");
+                      partition_path = device_path + new_partition.to_string ();
+                  } else {
+                      Log.instance().log ("not root");
+                  }
+                  break;
+              case  "delete":
+                  var range = splittedParams[3].split("-");
+                  Log.instance().log ("range_start :" + range[0]);
+                  Log.instance().log ("range_start :" + range[1]);
+                  var result = xdevice.delete_partition (uint64.parse (range[0]), uint64.parse (range[1]),
+                                                           splittedParams[2], splittedParams[1]);
+                Log.instance().log ("\nDeleted :" + result.to_string ()  + "\n");
+      
                   break;
               }
-              
-               
+              Log.instance().log ("\nTarget :" + partition_path  + "\n");
             }
             last_step = Step.PARTITION;
             do_next_job ();
         
         } else {
+            var d = Parted.get_devices (true); 
+    
+            var inconsistent = false;
+    
+            if (d != null && device > d.size) {
+                inconsistent = true;
+            } else {
+                if (d.get (device).partitions != null 
+                    && partition > d.get (device).partitions.size) {
+                    inconsistent = true;
+                }
+            }
+    
+            if (inconsistent) {
+                step = Step.DONE;
+                last_step = Step.DONE;
+                state = State.ERROR;
+                description = "Inconsistent partition record";
+                return;
+            }
+            
+            var partitions = d.get (device).partitions;
+            device_path = d.get (device).get_path ();
+            description = "Partitioning";
+            step = Step.PARTITION; 
     
             Log.instance().log ("Enter simple partitioning");
             if (partitions.get (partition).ptype == Device.PartitionType.FREESPACE) {
@@ -653,6 +692,7 @@ public class Installation : GLib.Object {
             Intl.bind_textdomain_codeset( Config.GETTEXT_PACKAGE, "UTF-8" );
             Intl.textdomain( Config.GETTEXT_PACKAGE );
             Utils.write_simple_file("/run/locale", "LC_ALL=%s\nLANG=%s\n".printf((string)buffer, (string)buffer));
+            Process.spawn_command_line_sync ("/bin/cp /run/locale /etc/default/locale");
             buffer = null;
         }
 

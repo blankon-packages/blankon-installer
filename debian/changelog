@@ -1,3 +1,11 @@
+blankon-installer (0.1.76) tambora; urgency=medium
+
+  * Fix locales
+  * Update UI
+  * Partition update on progress
+
+ -- Mahyuddin <yudi.al@gmail.com>  Mon, 04 May 2015 23:52:17 +0700
+
 blankon-installer (0.1.75) tambora; urgency=low
 
   * Create partition function
