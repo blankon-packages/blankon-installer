@@ -24,7 +24,7 @@ VCS-Browser: http://dev.blankonlinux.or.id/browser/rote/blankon-installer
 Package: blankon-installer
 Architecture: any
 Depends: parted, 
-         grub-pc, 
+         grub-pc | grub-efi-amd64 | grub-efi-i386 , 
          passwd, 
          initramfs-tools, 
          blankon-repository-setup,

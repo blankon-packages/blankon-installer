@@ -1,3 +1,9 @@
+blankon-installer (0.1.77) tambora; urgency=medium
+
+  * Change depends gub-pc to grub-pc | grub-efi-amd64 | grub-efi-i386  
+
+ -- Mahyuddin <yudi.al@gmail.com>  Sat, 16 May 2015 10:52:07 +0700
+
 blankon-installer (0.1.76) tambora; urgency=medium
 
   * Fix locales
