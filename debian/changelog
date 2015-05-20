@@ -1,3 +1,10 @@
+blankon-installer (0.1.78) tambora; urgency=medium
+
+  * Working Installation
+  * Format Partition
+
+ -- Syai Mif <syaimif@di.blankon.in>  Wed, 20 May 2015 08:03:31 +0700
+
 blankon-installer (0.1.77) tambora; urgency=medium
 
   * Change depends gub-pc to grub-pc | grub-efi-amd64 | grub-efi-i386  

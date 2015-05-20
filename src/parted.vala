@@ -123,6 +123,8 @@ public class Device : GLib.Object {
         public string description { get;  set; }
         public PartitionType ptype { get;  set; }
 
+        public Ped.Partition? internal;
+
         public Partition () {
             number = -1;
             start = -1;
@@ -133,6 +135,7 @@ public class Device : GLib.Object {
             description = "";
             parent = -1;
             ptype = PartitionType.INVALID;
+            internal = null;
         }
 
         public Partition.blank_with_size (uint64 size) {
@@ -145,6 +148,7 @@ public class Device : GLib.Object {
             this.description    = "";
             this.parent         = 0;
             this.ptype          = PartitionType.FREESPACE;
+            internal = null;
         }
     }
 
@@ -198,7 +202,7 @@ public class Device : GLib.Object {
                 var flag = "";
                 var description = "";
                 if (p.num > 0) {
-                    description = OsProber.get_description (device.path + p.num.to_string());
+                    //description = OsProber.get_description (device.path + p.num.to_string());
                 }
                 PartitionType type = PartitionType.NORMAL;
                 switch (p.type) {
@@ -238,6 +242,7 @@ public class Device : GLib.Object {
                 new_p.flag          = flag;
                 new_p.description   = description;
                 new_p.ptype         = type; 
+                new_p.internal      = p;
                 partitions.add (new_p);
             }
             if (partitions.is_empty) {
@@ -245,6 +250,8 @@ public class Device : GLib.Object {
                 partitions.add (new_p);
             }
         } else {
+            Ped.DiskType diskType = new Ped.DiskType("gpt");
+            disk = new Ped.Disk(device, diskType);
             Partition new_p     = new Partition.blank_with_size (get_size () - 1);
             partitions.add (new_p);
         }
@@ -289,7 +296,12 @@ public class Device : GLib.Object {
         if (!valid)
             return 0;
 
-        return disk.get_last_partition_num ();
+        int retval = 0;
+        Ped.Partition? p = null;
+        while ((p = disk.next_partition (p)) != null) {
+            if (p.num >= 0) retval ++;
+        }
+        return retval;
     }
 
     public uint64 get_unit_size () {
@@ -308,22 +320,15 @@ public class Device : GLib.Object {
     }
     
     // \brief Delete existing partition
-    public int delete_partition (uint64 byte_start, uint64 byte_end, string fs, string type) throws DeviceError {
-        uint64 start = (uint64) (byte_start / get_unit_size ());
-        uint64 end  = (uint64) (byte_end / get_unit_size ());
-        var filesystem = new Ped.FileSystemType(fs);
-        var deleted_partition = new Ped.Partition(disk, Ped.PartitionType.NORMAL, filesystem, start, end);
-        /* if (type == "normal") { */
-        /* } else if (type == "extended") { */
-        /*   var deleted_partition = new Ped.Partition(disk, Ped.PartitionType.EXTENDED, filesystem, start, end); */
-        /* } else if (type == "logical") { */
-        /*   var deleted_partition = new Ped.Partition(disk, Ped.PartitionType.LOGICAL, filesystem, start, end); */
-        /* } */
-        var delete = disk.delete_partition (deleted_partition);
-        if (delete == 0) {
-            throw new DeviceError.CANT_CREATE_PARTITION ("Unable to delete existing partition\n");
+    public int delete_partition (int index) throws DeviceError {
+        Ped.Partition p = disk.get_partition(index);
+
+        if (p != null) {
+            int retval = disk.delete_partition (p);
+            commit_changes();
+            return retval;
         } else {
-          return delete;
+            throw new DeviceError.CANT_CREATE_PARTITION ("Unable to delete existing partition\n");
         }
     }
     
@@ -331,8 +336,8 @@ public class Device : GLib.Object {
     // create a partition, either it is a primary, extended, or logical
 
     public int create_partition (uint64 byte_start, uint64 byte_end, string fs, string type, string mount) throws DeviceError {
-        /* Ped.Device device = new Ped.Device.from_name("/dev/sda"); */ 
-        /* var xdisk = new Ped.Disk.from_device (device); */
+
+
         // TODO: validate
         Ped.Partition new_partition = null;
         Ped.FileSystemType fs_type = new Ped.FileSystemType(fs);
@@ -347,17 +352,53 @@ public class Device : GLib.Object {
           new_partition = new Ped.Partition(disk, Ped.PartitionType.LOGICAL, new_fs, start, end);
         }
         if (new_partition != null) {
+
+            // collect part_num before commit
+            int [] p_num_array = {};
+            Ped.Partition? p = disk.part_list;
+            while ((p = disk.next_partition (p)) != null) {
+                /* if (p.num > 0) { */
+                    p_num_array += p.num;
+                    stdout.printf ("origin : " + p.num.to_string () + "\n");
+                /* } */
+            }
+
             var part_num = disk.add_partition (new_partition, new Ped.Constraint.any (device));
             if (part_num == 0) {
                 throw new DeviceError.CANT_CREATE_PARTITION ("Unable to create partition\n");
             }
-            disk.commit_to_dev ();
-            disk.commit_to_os ();
+            commit_changes();
+            
+            // collect new part_num array after commit
+            int [] p_num_array_new = {};
+            Ped.Partition? q = disk.part_list;
+            while ((q = disk.next_partition (q)) != null) {
+                /* if (p.num > 0) { */
+                    p_num_array_new += q.num;
+                    stdout.printf ("next : " + q.num.to_string () + "\n");
+                /* } */
+            }
+
+            //find the new part_num
+            foreach (int x in p_num_array_new) {
+                bool is_exists = false;
+                for (int i = 0;i < p_num_array.length;i++) {
+                    if (x == p_num_array[i]) {
+                        is_exists = true;
+                    }
+                }
+                if (is_exists == false) {
+                    part_num = x;
+                }
+            }
+
+            // should return correct part number
             return part_num;
+
         } else {
             throw new DeviceError.CANT_CREATE_PARTITION ("Unable to create custom partition\n");
         }
-    }
+    }  
 
     // \brief Create a partition (simple)
     //
