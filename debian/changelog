@@ -1,3 +1,9 @@
+blankon-installer (0.1.79) tambora; urgency=medium
+
+  * made possible installation to secondary hdd
+
+ -- Mijortsa <azis.astroim@surabaya.di.blankon.in>  Thu, 21 May 2015 02:44:06 +0700
+
 blankon-installer (0.1.78) tambora; urgency=medium
 
   * Working Installation
