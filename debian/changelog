@@ -1,3 +1,10 @@
+blankon-installer (0.1.80) tambora; urgency=medium
+
+  * UEFI installation support
+  * Format partition immediatelly after created
+
+ -- Syai Mif <syaimif@di.blankon.in>  Sat, 23 May 2015 07:44:39 +0700
+
 blankon-installer (0.1.79) tambora; urgency=medium
 
   * made possible installation to secondary hdd
