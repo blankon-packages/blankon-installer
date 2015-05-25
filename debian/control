@@ -17,20 +17,23 @@ Build-Depends: autotools-dev,
                gnome-common,
                valac
 Standards-Version: 3.9.2
-Homepage: https://bitbucket.org/mdamt/blankon-installer
-VCS-git: git clone https://bitbucket.org/mdamt/blankon-installer.git
-VCS-Browser: http://dev.blankonlinux.or.id/browser/rote/blankon-installer
+Homepage: https://github.com/BlankOn/blankon-installer
+VCS-git: git clone https://github.com/BlankOn/blankon-installer.git
+VCS-Browser: http://dev.blankonlinux.or.id/browser/tambora/blankon-installer
 
 Package: blankon-installer
 Architecture: any
 Depends: parted, 
          grub-pc | grub-efi-amd64 | grub-efi-i386 , 
          passwd, 
-         initramfs-tools, 
+         initramfs-tools,
+         libwebkitgtk-1.0-0,
+         libjavascriptcoregtk-1.0-0,
+         libwebkitgtk-1.0-common,
          blankon-repository-setup,
          plymouth-theme-blankon
          ${misc:Depends}, 
          ${shlibs:Depends}
 Conflicts: debian-installer-launcher
-Description: BlankOn Installer
+Description: BlankOn Installer 
  BlankOn Installer

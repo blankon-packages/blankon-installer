@@ -1,3 +1,13 @@
+blankon-installer (0.1.82) tambora; urgency=medium
+
+  * Added depends:
+    - libjavascriptcoregtk-1.0-0
+    - libwebkitgtk-1.0-0
+    - libwebkitgtk-1.0-common
+  * Change Homepage, VCS-git, VCS-browser
+
+ -- Mahyuddin <yudi.al@gmail.com>  Tue, 26 May 2015 00:13:07 +0700
+
 blankon-installer (0.1.81) tambora; urgency=medium
 
   * Write autologin
