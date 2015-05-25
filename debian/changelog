@@ -1,3 +1,10 @@
+blankon-installer (0.1.81) tambora; urgency=medium
+
+  * Write autologin
+  * Add installation-id.txt
+
+ -- Syai Mif <syaimif@di.blankon.in>  Mon, 25 May 2015 20:15:46 +0700
+
 blankon-installer (0.1.80) tambora; urgency=medium
 
   * UEFI installation support

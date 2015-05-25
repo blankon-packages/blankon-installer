@@ -51,10 +51,11 @@ rm -f $ROOTFS/tmp/user-pass
 if [ "x$AUTOLOGIN" = "x1" ];then
     if [ -s $ROOTFS/target/var/lib/dpkg/info/lightdm.list ];then
         echo "Setting up lightdm autologin"
+
         if [ -s $ROOTFS/target/etc/lightdm/lightdm.conf ];then
             sed -i -r -e "s|^#.*autologin-user=.*\$|autologin-user=$USERNAME|" \
-                      -e "s|^#.*autologin-user-timeout=.*\$|autologin-user-timeout=0|" \
-                      $ROOTFS/target/etc/lightdm/lightdm.conf
+                -e "s|^#.*autologin-user-timeout=.*\$|autologin-user-timeout=0|" \
+                $ROOTFS/target/etc/lightdm/lightdm.conf
         fi
         if [ ! -s $ROOTFS/target/etc/pam.d/lightdm-autologin ];then
             cat << @@EOF > $ROOTFS/target/etc/pam.d/lightdm-autologin
@@ -123,3 +124,11 @@ if [ -e $ROOTFS/target/var/lib/dpkg/info/openssh-server.postinst ]; then
         do_chroot /usr/sbin/dpkg-reconfigure --no-reload openssh-server
     fi
 fi
+
+
+###### Write installation-id.txt file
+touch $ROOTFS/target/etc/installation-id.txt
+DIST=$(lsb_release -a | tail -1 | sed -e 's/:/\n/g' | tail -1 | sed -e 's/^[[:space:]]*//');
+ARCH=$(uname -m);
+UUID=$(uuidgen); 
+echo "$DIST-$ARCH-$UUID" >> $ROOTFS/target/etc/installation-id.txt
