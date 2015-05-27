@@ -1,3 +1,9 @@
+blankon-installer (0.1.83) tambora; urgency=medium
+
+  * create bios_grub partition if disk is empty and has no label
+
+ -- Mijortsa <azis.astrojim@surabaya.di.blankon.in>  Thu, 28 May 2015 06:19:40 +0700
+
 blankon-installer (0.1.82) tambora; urgency=medium
 
   * Added depends:
