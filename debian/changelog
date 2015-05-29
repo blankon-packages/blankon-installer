@@ -1,3 +1,9 @@
+blankon-installer (0.1.84) tambora; urgency=medium
+
+  * Fixes autologin 
+
+ -- Mahyuddin <yudi.al@gmail.com>  Fri, 29 May 2015 11:30:09 +0700
+
 blankon-installer (0.1.83) tambora; urgency=medium
 
   * create bios_grub partition if disk is empty and has no label
