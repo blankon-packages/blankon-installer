@@ -1,3 +1,11 @@
+blankon-installer (0.1.86) tambora; urgency=medium
+
+  * Update UI
+  * Add Automatically login to Installation Summary
+  * Fixed swap creation in advanced mode
+
+ -- Mahyuddin <yudi.al@gmail.com>  Sun, 31 May 2015 00:52:39 +0700
+
 blankon-installer (0.1.85) tambora; urgency=medium
 
   * Update UI, partisi yang tidak memenuhi kriteria ukuran tetap menampilkan detail partisi
