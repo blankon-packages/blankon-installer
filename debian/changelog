@@ -1,3 +1,10 @@
+blankon-installer (0.1.85) tambora; urgency=medium
+
+  * Update UI, partisi yang tidak memenuhi kriteria ukuran tetap menampilkan detail partisi
+  * Perbaikan skrip untuk konfigurasi autologin, mesti dikomentari dengan pagar, bukan dihapus. 
+
+ -- Mahyuddin <yudi.al@gmail.com>  Sat, 30 May 2015 14:49:16 +0700
+
 blankon-installer (0.1.84) tambora; urgency=medium
 
   * Fixes autologin 
