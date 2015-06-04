@@ -1,3 +1,9 @@
+blankon-installer (0.1.87) blankon-installer; urgency=medium
+
+  * Fix ESP/BIOS_GRUB partition creation 
+
+ -- Mahyuddin <yudi.al@gmail.com>  Thu, 04 Jun 2015 10:07:50 +0700
+
 blankon-installer (0.1.86) tambora; urgency=medium
 
   * Update UI
