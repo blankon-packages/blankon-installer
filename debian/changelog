@@ -1,4 +1,4 @@
-blankon-installer (0.1.87) blankon-installer; urgency=medium
+blankon-installer (0.1.87) tambora; urgency=medium
 
   * Fix ESP/BIOS_GRUB partition creation 
 
