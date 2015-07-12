@@ -1,3 +1,10 @@
+blankon-installer (0.1.89) tambora; urgency=medium
+
+  * Remove /etc/apt/source.list.d/local.list in installation target
+  * debian/control libvala-0.14-dev to libvala-20-dev
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Sun, 12 Jul 2015 17:54:32 +0700
+
 blankon-installer (0.1.88) tambora; urgency=medium
 
   * Update UI

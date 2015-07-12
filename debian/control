@@ -12,7 +12,7 @@ Build-Depends: autotools-dev,
                libparted-dev (>= 3.2-7),
                libsoup2.4-dev,
                libunique-3.0-dev,
-               libvala-0.14-dev,
+               libvala-0.20-dev,
                libwebkitgtk-3.0-dev,
                gnome-common,
                valac
@@ -24,7 +24,7 @@ VCS-Browser: http://dev.blankonlinux.or.id/browser/tambora/blankon-installer
 Package: blankon-installer
 Architecture: any
 Depends: parted, 
-         grub-pc | grub-efi-amd64 | grub-efi-i386 , 
+         grub-pc | grub-efi-amd64 | grub-efi-i386, 
          passwd, 
          initramfs-tools,
          libwebkitgtk-1.0-0,
