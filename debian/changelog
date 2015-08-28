@@ -1,6 +1,7 @@
 blankon-installer (0.1.90) tambora; urgency=medium
 
   * Use rsync instead, redirect verbose output to /tmp/b-i-copy-fs-progress 
+  * Bump versiob libvala
 
  -- Mahyuddin <yudi.al@gmail.com>  Fri, 28 Aug 2015 09:02:31 +0700
 

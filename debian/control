@@ -12,7 +12,7 @@ Build-Depends: autotools-dev,
                libparted-dev (>= 3.2-7),
                libsoup2.4-dev,
                libunique-3.0-dev,
-               libvala-0.20-dev,
+               libvala-0.28-dev,
                libwebkitgtk-3.0-dev,
                gnome-common,
                valac
