@@ -1,6 +1,7 @@
 blankon-installer (0.1.91) tambora; urgency=medium
 
   * Add build-dep libwebkitgtk-dev 
+  * Change libvala-0.32
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Tue, 07 Jun 2016 17:15:00 +0700
 
