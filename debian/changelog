@@ -1,3 +1,9 @@
+blankon-installer (0.1.91) tambora; urgency=medium
+
+  * Add build-dep libwebkitgtk-dev 
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Tue, 07 Jun 2016 17:15:00 +0700
+
 blankon-installer (0.1.90) tambora; urgency=medium
 
   * Use rsync instead, redirect verbose output to /tmp/b-i-copy-fs-progress 
