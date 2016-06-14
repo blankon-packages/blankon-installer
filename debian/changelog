@@ -1,3 +1,9 @@
+blankon-installer (0.1.92) tambora; urgency=medium
+
+  * Revert pantheon-greeter to lightdm-webkit-greeter 
+
+ -- dotovr <dotovr@preko>  Tue, 14 Jun 2016 20:13:08 +0700
+
 blankon-installer (0.1.91) tambora; urgency=medium
 
   * Add build-dep libwebkitgtk-dev 
