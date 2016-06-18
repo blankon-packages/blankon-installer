@@ -1,4 +1,10 @@
-blankon-installer (0.3-1blankon1) tambora; urgency=low
+blankon-installer (0.4-0blankon1) tambora; urgency=low
+
+  * Sync with bzr patch for grub install script
+
+ -- Syai Mif <syaimif@di.blankon.in>  Sun, 19 Jun 2016 05:52:34 +0700
+
+blankon-installer (0.3-0blankon1) tambora; urgency=low
 
   * New upstream release 
    -Update build result image to the proper link
