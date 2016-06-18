@@ -1,3 +1,11 @@
+blankon-installer (0.2.0) tambora; urgency=medium
+
+  * New upstream release
+   - Merge pull request #28 from herpiko/libparted_9
+   - Sync with bzr. Patch for grub install script
+
+ -- Syai Mif <syaimif@di.blankon.in>  Sat, 18 Jun 2016 09:19:59 +0700
+
 blankon-installer (0.1.92) tambora; urgency=medium
 
   * Revert pantheon-greeter to lightdm-webkit-greeter 
