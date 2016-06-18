@@ -1,16 +1,9 @@
-blankon-installer (0.2.0-0blankon1) tambora; urgency=medium
+blankon-installer (0.3-1blankon1) tambora; urgency=low
 
-  * Rebuild
+  * New upstream release 
+   -Update build result image to the proper link
 
- -- Syai Mif <syaimif@di.blankon.in>  Sat, 18 Jun 2016 12:02:18 +0700
-
-blankon-installer (0.2.0) tambora; urgency=medium
-
-  * New upstream release
-   - Merge pull request #28 from herpiko/libparted_9
-   - Sync with bzr. Patch for grub install script
-
- -- Syai Mif <syaimif@di.blankon.in>  Sat, 18 Jun 2016 09:19:59 +0700
+ -- Syai Mif <syaimif@di.blankon.in>  Sat, 18 Jun 2016 16:36:19 +0700
 
 blankon-installer (0.1.92) tambora; urgency=medium
 

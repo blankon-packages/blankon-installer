@@ -17,7 +17,7 @@ Build-Depends: autotools-dev,
                libwebkitgtk-3.0-dev,
                gnome-common,
                valac
-Standards-Version: 3.9.2
+Standards-Version: 3.9.6
 Homepage: https://github.com/BlankOn/blankon-installer
 VCS-git: git clone https://github.com/BlankOn/blankon-installer.git
 VCS-Browser: http://dev.blankonlinux.or.id/browser/tambora/blankon-installer
