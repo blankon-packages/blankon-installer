@@ -1,3 +1,9 @@
+blankon-installer (0.2.0-0blankon1) tambora; urgency=medium
+
+  * Rebuild
+
+ -- Syai Mif <syaimif@di.blankon.in>  Sat, 18 Jun 2016 12:02:18 +0700
+
 blankon-installer (0.2.0) tambora; urgency=medium
 
   * New upstream release
