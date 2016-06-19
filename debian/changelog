@@ -1,3 +1,9 @@
+blankon-installer (0.5-0blankon2) tambora; urgency=medium
+
+  * Rebuild
+
+ -- Syai Mif <syaimif@localhost>  Sun, 19 Jun 2016 10:20:58 +0700
+
 blankon-installer (0.5-0blankon1) tambora; urgency=low
 
   * Update UI : button color
