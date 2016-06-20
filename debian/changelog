@@ -1,3 +1,9 @@
+blankon-installer (0.7-0blankon1) tambora; urgency=low
+
+  * Update ui : div as checkbox element
+
+ -- Syai Mif <syaimif@di.blankon.in>  Mon, 20 Jun 2016 13:53:10 +0700
+
 blankon-installer (0.6-0blankon1) tambora; urgency=medium
 
   * update ui
