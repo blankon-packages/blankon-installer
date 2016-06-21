@@ -1,3 +1,9 @@
+blankon-installer (0.8-0blankon1) tambora; urgency=low
+
+  * Read package-to-remove file from environment variable
+
+ -- Syai Mif <syaimif@di.blankon.in>  Wed, 22 Jun 2016 06:30:18 +0700
+
 blankon-installer (0.7-0blankon1) tambora; urgency=low
 
   * Update ui : div as checkbox element
