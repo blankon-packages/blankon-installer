@@ -1,3 +1,9 @@
+blankon-installer (0.9-0blankon1) tambora; urgency=low
+
+  * Hardcode remove package path to /lib/live/mount/medium/live
+
+ -- Syai Mif <syaimif@di.blankon.in>  Wed, 22 Jun 2016 14:10:41 +0700
+
 blankon-installer (0.8-0blankon1) tambora; urgency=low
 
   * Read package-to-remove file from environment variable
