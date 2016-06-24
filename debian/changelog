@@ -1,3 +1,9 @@
+blankon-installer (0.11-0blankon3) tambora; urgency=medium
+
+  * Drop lsb-core
+
+ -- Syai Mif <syaimif@di.blankon.in>  Fri, 24 Jun 2016 21:15:26 +0700
+
 blankon-installer (0.11-0blankon2) tambora; urgency=medium
 
   * Add depends lsb-core

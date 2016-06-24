@@ -29,7 +29,6 @@ Depends: parted,
          passwd, 
          initramfs-tools,
          blankon-repository-setup,
-	 lsb-core,
          plymouth-theme-blankon
          ${misc:Depends}, 
          ${shlibs:Depends}
