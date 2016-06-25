@@ -1,3 +1,9 @@
+blankon-installer (0.12-0blankon2) tambora; urgency=medium
+
+  * increase maintener version
+
+ -- ahmad haris <haris@rr>  Sat, 25 Jun 2016 22:34:42 +0700
+
 blankon-installer (0.12-0blankon1) tambora; urgency=medium
 
   * Leave grep status code untouched. Fix localization
