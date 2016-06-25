@@ -1,3 +1,9 @@
+blankon-installer (0.12-0blankon1) tambora; urgency=medium
+
+  * Leave grep status code untouched. Fix localization
+
+ -- ahmad haris <me@princeofgiri.com>  Sat, 25 Jun 2016 11:32:38 +0700
+
 blankon-installer (0.11-0blankon3) tambora; urgency=medium
 
   * Drop lsb-core
