@@ -1,3 +1,9 @@
+blankon-installer (0.13-0blankon1) tambora; urgency=medium
+
+  * Enable plymouth and GRUB_GFXPAYLOAD_LINUX 
+
+ -- ahmad haris <me@princeofgiri.com>  Sun, 26 Jun 2016 09:14:18 +0700
+
 blankon-installer (0.12-0blankon2) tambora; urgency=medium
 
   * increase maintener version
