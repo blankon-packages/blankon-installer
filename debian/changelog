@@ -1,3 +1,9 @@
+blankon-installer (1.0-0blankon1) tambora; urgency=medium
+
+  * major release
+
+ -- ahmad haris <me@princeofgiri.com>  Tue, 28 Jun 2016 07:25:23 +0700
+
 blankon-installer (0.15-0blankon1) tambora; urgency=medium
 
   * fix for reboot button
