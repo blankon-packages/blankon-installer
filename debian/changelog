@@ -1,3 +1,9 @@
+blankon-installer (1.2-0blankon1) tambora; urgency=medium
+
+  * Update UI : white color for labels. Fixed content height 
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Tue, 28 Jun 2016 11:48:57 +0700
+
 blankon-installer (1.1-0blankon1) tambora; urgency=medium
 
   * Update UI : white color for labels. Fixed content height
