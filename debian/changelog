@@ -1,3 +1,9 @@
+blankon-installer (1.4-0blankon1) tambora; urgency=medium
+
+  * Fix languange string from backend
+
+ -- Syai Mif <syaimif@di.blankon.in>  Wed, 29 Jun 2016 07:20:04 +0700
+
 blankon-installer (1.3-0blankon1) tambora; urgency=medium
 
   * Fix enforce strong password validation
@@ -704,5 +710,6 @@ blankon-installer (0.1.1) rote; urgency=low
   * Initial Release:
       
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Thu, 12 Jan 2012 22:32:03 +0700
+
 
 
