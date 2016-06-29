@@ -1,3 +1,9 @@
+blankon-installer (1.5-0blankon1) tambora; urgency=medium
+
+  * Set session and language in AccountsService 
+
+ -- Syai Mif <syaimif@di.blankon.in>  Wed, 29 Jun 2016 10:24:35 +0700
+
 blankon-installer (1.4-0blankon1) tambora; urgency=medium
 
   * Fix languange string from backend
