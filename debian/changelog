@@ -1,3 +1,9 @@
+blankon-installer (1.8-0blankon1) tambora; urgency=medium
+
+  * Uncomment Parted.getDevices API
+
+ -- Syai Mif <syaimif@di.blankon.in>  Thu, 30 Jun 2016 15:40:18 +0700
+
 blankon-installer (1.7-0blankon1) tambora; urgency=medium
 
   * Update UI : fix freespace merge in deletion
