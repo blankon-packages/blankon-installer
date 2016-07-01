@@ -1,3 +1,9 @@
+blankon-installer (1.9-0blankon1) tambora; urgency=medium
+
+  * Pure javacript slide bar. Fix localization 
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Fri, 01 Jul 2016 08:25:49 +0700
+
 blankon-installer (1.8-0blankon1) tambora; urgency=medium
 
   * Uncomment Parted.getDevices API
