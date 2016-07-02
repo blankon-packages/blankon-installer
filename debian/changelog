@@ -1,3 +1,11 @@
+blankon-installer (1.13-0blankon1) tambora; urgency=medium
+
+  * New upstream release
+    - Readable UI
+    - Avoid error when removing /etc/target/localtime
+
+ -- dotovr <dotovr@preko>  Sun, 03 Jul 2016 05:22:56 +0700
+
 blankon-installer (1.12-0blankon2) tambora; urgency=medium
 
   * Add patch for reboot in #221
