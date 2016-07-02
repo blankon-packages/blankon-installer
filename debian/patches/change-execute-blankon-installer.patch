@@ -1,0 +1,8 @@
+diff -Naur -p1 blankon-installer-1.12.orig/src/blankon-installer.desktop blankon-installer-1.12/src/blankon-installer.desktop
+--- blankon-installer-1.12.orig/src/blankon-installer.desktop	2016-07-02 22:06:09.569561030 +0700
++++ blankon-installer-1.12/src/blankon-installer.desktop	2016-07-02 22:07:50.461650116 +0700
+@@ -4,3 +4,3 @@ Name=Install BlankOn
+ Comment=Install BlankOn permanently to your hard disk
+-Exec=gksudo /usr/bin/blankon-installer
++Exec=gksudo /usr/bin/blankon-try-session-installer
+ Icon=blankon-installer

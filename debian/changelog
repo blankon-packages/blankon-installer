@@ -1,3 +1,9 @@
+blankon-installer (1.12-0blankon2) tambora; urgency=medium
+
+  * Add patch for reboot in #221
+
+ -- Syai Mif <syaimif@di.blankon.in>  Sat, 02 Jul 2016 22:15:04 +0700
+
 blankon-installer (1.12-0blankon1) tambora; urgency=medium
 
   * Eject DVD on reboot
