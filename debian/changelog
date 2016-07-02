@@ -1,3 +1,10 @@
+blankon-installer (1.14-0blankon1) tambora; urgency=medium
+
+  * New upstream release
+    - Avoid duplicated step for partitioner.
+
+ -- dotovr <dotovr@preko>  Sun, 03 Jul 2016 06:09:56 +0700
+
 blankon-installer (1.13-0blankon1) tambora; urgency=medium
 
   * New upstream release
@@ -17,7 +24,6 @@ blankon-installer (1.12-0blankon1) tambora; urgency=medium
   * Eject DVD on reboot
 
  -- Syai Mif <syaimif@di.blankon.in>  Sat, 02 Jul 2016 21:11:36 +0700
-
 blankon-installer (1.11-0blankon1) tambora; urgency=medium
 
   * ix partition block margin and partition creation from new partition
