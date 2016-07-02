@@ -1,3 +1,9 @@
+blankon-installer (1.10-0blankon1) tambora; urgency=medium
+
+  * Fix partition slider bar
+
+ -- Syai Mif <syaimif@di.blankon.in>  Sat, 02 Jul 2016 09:49:14 +0700
+
 blankon-installer (1.9-0blankon1) tambora; urgency=medium
 
   * Pure javacript slide bar. Fix localization 
