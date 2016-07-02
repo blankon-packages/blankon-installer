@@ -1,3 +1,9 @@
+blankon-installer (1.11-0blankon1) tambora; urgency=medium
+
+  * ix partition block margin and partition creation from new partition
+
+ -- Syai Mif <syaimif@di.blankon.in>  Sat, 02 Jul 2016 11:10:18 +0700
+
 blankon-installer (1.10-0blankon1) tambora; urgency=medium
 
   * Fix partition slider bar
