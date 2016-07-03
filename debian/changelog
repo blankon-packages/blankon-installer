@@ -1,3 +1,11 @@
+blankon-installer (1.15-0blankon1) tambora; urgency=medium
+
+  * New upstream release
+  * Use blankon-session-try-installer instead of blankon-installer
+  * Drop change-execute-blankon-installer.patch already in upstream
+
+ -- dotovr <dotovr@preko>  Mon, 04 Jul 2016 00:56:27 +0700
+
 blankon-installer (1.14-0blankon1) tambora; urgency=medium
 
   * New upstream release
