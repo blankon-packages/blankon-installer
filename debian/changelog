@@ -1,3 +1,9 @@
+blankon-installer (1.18-0blankon1) tambora; urgency=medium
+
+  * Check mounted partition before run the real blankon-installer 
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Mon, 04 Jul 2016 15:19:19 +0700
+
 blankon-installer (1.17-0blankon1) tambora; urgency=medium
 
   * Merge pull request #65 from herpiko/whitelabel
