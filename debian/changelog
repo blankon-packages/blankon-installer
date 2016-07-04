@@ -1,3 +1,10 @@
+blankon-installer (1.17-0blankon1) tambora; urgency=medium
+
+  * Merge pull request #65 from herpiko/whitelabel
+  * White color for label.
+
+ -- ahmad haris <me@princeofgiri.com>  Mon, 04 Jul 2016 14:17:22 +0700
+
 blankon-installer (1.15-0blankon1) tambora; urgency=medium
 
   * New upstream release
