@@ -1,3 +1,9 @@
+blankon-installer (1.20-0blankon1) tambora; urgency=medium
+
+  * Eject DVD rom via systemd service
+
+ -- Syai Mif <syaimif@di.blankon.in>  Tue, 05 Jul 2016 14:10:20 +0700
+
 blankon-installer (1.19-0blankon1) tambora; urgency=medium
 
   * Make blankon-session-try-installer script compatible with sh
