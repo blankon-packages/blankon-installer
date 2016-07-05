@@ -1,3 +1,10 @@
+blankon-installer (1.19-0blankon1) tambora; urgency=medium
+
+  * Make blankon-session-try-installer script compatible with sh
+  * Merge #67
+
+ -- ahmad haris <me@princeofgiri.com>  Tue, 05 Jul 2016 07:08:15 +0700
+
 blankon-installer (1.18-0blankon1) tambora; urgency=medium
 
   * Check mounted partition before run the real blankon-installer 
