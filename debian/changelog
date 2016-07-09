@@ -1,3 +1,9 @@
+blankon-installer (1.22-0blankon1) tambora; urgency=medium
+
+  * Add /sbin to exported PATH since apt-get need ldconfig and others fro
+
+ -- Syai Mif <syaimif@di.blankon.in>  Sat, 09 Jul 2016 09:00:24 +0700
+
 blankon-installer (1.21-0blankon1) tambora; urgency=medium
 
   * Uefi support in easy mode
