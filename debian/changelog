@@ -1,3 +1,9 @@
+blankon-installer (1.23-0blankon1) tambora; urgency=medium
+
+  * fixing avatar 
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Sun, 10 Jul 2016 09:37:55 +0700
+
 blankon-installer (1.22-0blankon1) tambora; urgency=medium
 
   * Add /sbin to exported PATH since apt-get need ldconfig and others fro
