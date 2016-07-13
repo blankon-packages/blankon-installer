@@ -1,6 +1,6 @@
-blankon-installer (1.23-0blankon2) tambora; urgency=medium
+blankon-installer (1.24-0blankon1) tambora; urgency=medium
 
-  * Add 99scim.pacth
+  * Add 99scim To Install
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Tue, 12 Jul 2016 19:45:20 +0700
 
