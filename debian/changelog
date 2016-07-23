@@ -1,3 +1,9 @@
+blankon-installer (1.26-0blankon1) tambora; urgency=medium
+
+  * Update UI 
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Sat, 23 Jul 2016 10:39:54 +0700
+
 blankon-installer (1.25-0blankon1) tambora; urgency=medium
 
   * New upstream release
