@@ -1,3 +1,9 @@
+blankon-installer (1.27-0blankon1) tambora; urgency=medium
+
+  * ix permission on live
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Sun, 24 Jul 2016 19:07:47 +0700
+
 blankon-installer (1.26-0blankon1) tambora; urgency=medium
 
   * Update UI 
