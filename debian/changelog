@@ -1,3 +1,9 @@
+blankon-installer (1.28-0blankon1+pr85) tambora; urgency=medium
+
+  * Put UUID instead of partition path
+
+ -- dotovr <dotovr@preko>  Tue, 26 Jul 2016 14:15:55 +0700
+
 blankon-installer (1.28-0blankon1) tambora; urgency=medium
 
   * Add global environment variable. Minor fixes.
