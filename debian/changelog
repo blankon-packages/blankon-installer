@@ -1,3 +1,9 @@
+blankon-installer (1.28-0blankon1) tambora; urgency=medium
+
+  * Add global environment variable. Minor fixes.
+
+ -- Syai Mif <syaimif@di.blankon.in>  Tue, 26 Jul 2016 11:35:22 +0700
+
 blankon-installer (1.27-0blankon1) tambora; urgency=medium
 
   * ix permission on live
