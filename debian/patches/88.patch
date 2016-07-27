@@ -1,0 +1,22 @@
+From 725baadea327abae58f97887c03c309a154da718 Mon Sep 17 00:00:00 2001
+From: Mohammad Anwari <mdamt@mdamt.net>
+Date: Wed, 27 Jul 2016 21:05:05 +0700
+Subject: [PATCH] Enable splash for encrypted setup
+
+---
+ scripts/b-i-install-grub | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/scripts/b-i-install-grub b/scripts/b-i-install-grub
+index 7ed360d..c3164ad 100644
+--- a/scripts/b-i-install-grub
++++ b/scripts/b-i-install-grub
+@@ -26,7 +26,7 @@ if [ -f /tmp/pass ];
+ then
+     # The GRUB_DISABLE_SUBMENY=y fix broken grub.cfg generation
+     cat << @@EOF >> /target/etc/default/grub
+-GRUB_CMDLINE_LINUX_DEFAULT="rw quiet cryptopts=target=root,source=/dev/lvm/root,lvm=root CRYPTSETUP=y"
++GRUB_CMDLINE_LINUX_DEFAULT="rw quiet splash cryptopts=target=root,source=/dev/lvm/root,lvm=root CRYPTSETUP=y"
+ GRUB_GFXPAYLOAD_LINUX=1024x768
+ @@EOF
+ 

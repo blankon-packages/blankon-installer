@@ -1,0 +1,155 @@
+From 04b8f8491623454a5da872c8829d379fd806fbbc Mon Sep 17 00:00:00 2001
+From: Mohammad Anwari <mdamt@mdamt.net>
+Date: Tue, 26 Jul 2016 14:03:07 +0700
+Subject: [PATCH 1/4] Put UUID instead of partition path
+
+---
+ scripts/b-i-setup-fs |  3 ++-
+ src/installer.vala   | 18 ++++++++++++++++--
+ 2 files changed, 18 insertions(+), 3 deletions(-)
+
+diff --git a/scripts/b-i-setup-fs b/scripts/b-i-setup-fs
+index 0381f8e..1d8157b 100644
+--- a/scripts/b-i-setup-fs
++++ b/scripts/b-i-setup-fs
+@@ -192,7 +192,8 @@ fi
+ 
+ for i in `cat $ROOTFS/tmp/swaps`;do
+     mkswap $i
+-    echo "$i    none    swap    sw  0   0" >> $ROOTFS/target/etc/fstab
++    UUID=`lsblk -no UUID $i`
++    echo "$UUID    none    swap    sw  0   0" >> $ROOTFS/target/etc/fstab
+ done
+ 
+ 
+diff --git a/src/installer.vala b/src/installer.vala
+index 79c3563..3b21c2f 100644
+--- a/src/installer.vala
++++ b/src/installer.vala
+@@ -551,9 +551,9 @@ public class Installation : GLib.Object {
+             do_simple_command_with_args (c, Step.MOUNTHOME, "mounting_home_filesystem ", "Unable to mount home filesystem");
+         
+             // write fstab file at tmp, will be copied to /target/etc/fstab by b-i-setup-fs script
+-            var content = partition_path + " / ext4 defaults 1 2";
++            var content = "UUID=" + backtick("/bin/lsblk -no UUID " + partition_path) + " / ext4 defaults 1 2";
+             Utils.write_simple_file ("/tmp/fstab", content);
+-            content = home + " /home ext4 defaults 1 2";
++            content = "UUID=" + backtick("/bin/lsblk -no UUID " + home) + " /home ext4 defaults 1 2";
+             Utils.write_simple_file ("/tmp/fstab", content);
+ 
+         } else {
+@@ -672,6 +672,20 @@ public class Installation : GLib.Object {
+ 
+     }
+ 
++    public string backtick (string command)
++    {
++      try {
++        int exitCode;
++        string std_out;
++        Process.spawn_command_line_sync(command, out std_out, null, out exitCode);
++        return std_out;
++      }
++      catch (GLib.Error e){
++        Log.instance().log ("Error running: " + e.message);
++        return "";
++      }
++    }
++
+     int run (string[] command) {
+         string[] env = { "LC_ALL=C" };
+ 
+
+From 2a609a20e9035736de29d9a39f2faa78ffecc983 Mon Sep 17 00:00:00 2001
+From: Mohammad Anwari <mdamt@mdamt.net>
+Date: Tue, 26 Jul 2016 20:25:22 +0700
+Subject: [PATCH 2/4] Add UUID key
+
+---
+ scripts/b-i-setup-fs | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/scripts/b-i-setup-fs b/scripts/b-i-setup-fs
+index 1d8157b..c68291c 100644
+--- a/scripts/b-i-setup-fs
++++ b/scripts/b-i-setup-fs
+@@ -193,7 +193,7 @@ fi
+ for i in `cat $ROOTFS/tmp/swaps`;do
+     mkswap $i
+     UUID=`lsblk -no UUID $i`
+-    echo "$UUID    none    swap    sw  0   0" >> $ROOTFS/target/etc/fstab
++    echo "UUID=$UUID    none    swap    sw  0   0" >> $ROOTFS/target/etc/fstab
+ done
+ 
+ 
+
+From ff4f3faf902ba166114c9ecb83b97ae63cf84c33 Mon Sep 17 00:00:00 2001
+From: Mohammad Anwari <mdamt@mdamt.net>
+Date: Wed, 27 Jul 2016 06:10:44 +0700
+Subject: [PATCH 3/4] Add root to easymode installation as well
+
+---
+ src/installer.vala | 16 ++++++++++++----
+ 1 file changed, 12 insertions(+), 4 deletions(-)
+
+diff --git a/src/installer.vala b/src/installer.vala
+index 3b21c2f..0d1d9f8 100644
+--- a/src/installer.vala
++++ b/src/installer.vala
+@@ -551,12 +551,20 @@ public class Installation : GLib.Object {
+             do_simple_command_with_args (c, Step.MOUNTHOME, "mounting_home_filesystem ", "Unable to mount home filesystem");
+         
+             // write fstab file at tmp, will be copied to /target/etc/fstab by b-i-setup-fs script
+-            var content = "UUID=" + backtick("/bin/lsblk -no UUID " + partition_path) + " / ext4 defaults 1 2";
+-            Utils.write_simple_file ("/tmp/fstab", content);
+-            content = "UUID=" + backtick("/bin/lsblk -no UUID " + home) + " /home ext4 defaults 1 2";
++            var root_partition = backtick("/bin/lsblk -no UUID " + partition_path);
++            var home_partition = backtick("/bin/lsblk -no UUID " + home);
++
++            var content = "UUID=" + root_partition + " / ext4 defaults 1 2\n";
++               content += "UUID=" + home_partition + " /home ext4 defaults 1 2\n";
+             Utils.write_simple_file ("/tmp/fstab", content);
+ 
+         } else {
++            // write fstab file at tmp, will be copied to /target/etc/fstab by b-i-setup-fs script
++            var root_partition = backtick("/bin/lsblk -no UUID " + partition_path);
++
++            var content = "UUID=" + root_partition + " / ext4 defaults 1 2\n";
++            Utils.write_simple_file ("/tmp/fstab", content);
++
+             last_step = Step.MOUNTHOME;
+             do_next_job ();
+         }
+@@ -678,7 +686,7 @@ public class Installation : GLib.Object {
+         int exitCode;
+         string std_out;
+         Process.spawn_command_line_sync(command, out std_out, null, out exitCode);
+-        return std_out;
++        return std_out.replace("/n", "");
+       }
+       catch (GLib.Error e){
+         Log.instance().log ("Error running: " + e.message);
+
+From 08e8b20334089d87da36d15ab9a45a0f39725206 Mon Sep 17 00:00:00 2001
+From: Mohammad Anwari <mdamt@mdamt.net>
+Date: Wed, 27 Jul 2016 20:47:30 +0700
+Subject: [PATCH 4/4] Fix missing / mountpoint. This also fixes by cryptsetup
+ failure in initramfs hook
+
+---
+ scripts/b-i-setup-fs | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/scripts/b-i-setup-fs b/scripts/b-i-setup-fs
+index c68291c..c256502 100644
+--- a/scripts/b-i-setup-fs
++++ b/scripts/b-i-setup-fs
+@@ -50,7 +50,7 @@ then
+   touch $ROOTFS/target/etc/crypttab
+   echo "root /dev/lvm/root none luks,retry=1" > $ROOTFS/target/etc/crypttab
+   touch $ROOTFS/target/etc/fstab
+-  echo "/dev/mapper/root ext4 relatime,errors=remount-ro 0 1" >> $ROOTFS/target/etc/fstab
++  echo "/dev/mapper/root / ext4 relatime,errors=remount-ro 0 1" >> $ROOTFS/target/etc/fstab
+   echo "/dev/mapper/lvm-swap    none    swap    sw  0   0" >> $ROOTFS/target/etc/fstab
+   echo "$BOOT /boot vfat rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro 0 2" >> $ROOTFS/target/etc/fstab
+   
