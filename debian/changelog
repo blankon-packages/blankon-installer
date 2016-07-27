@@ -1,3 +1,9 @@
+blankon-installer (1.28-0blankon1+pr85a) tambora; urgency=medium
+
+  * Fix put UUID instead of partition path
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Wed, 27 Jul 2016 12:51:28 +0700
+
 blankon-installer (1.28-0blankon1+pr85) tambora; urgency=medium
 
   * Put UUID instead of partition path
