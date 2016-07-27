@@ -1,3 +1,12 @@
+blankon-installer (1.28-0blankon1+pr86) tambora; urgency=medium
+
+  * Put UUID instead of partition path
+  *	Add UUID key
+  * Add root to easymode installation as well
+  * Fix missing / mountpoint. This also fixes by cryptsetup failure in  
+
+ -- dotovr <dotovr@preko>  Wed, 27 Jul 2016 21:08:25 +0700
+
 blankon-installer (1.28-0blankon1+pr85a) tambora; urgency=medium
 
   * Fix put UUID instead of partition path
