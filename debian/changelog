@@ -1,3 +1,9 @@
+blankon-installer (1.29-0blankon1) tambora; urgency=medium
+
+  * Update README.md : Debugging
+
+ -- Syai Mif <syaimif@di.blankon.in>  Thu, 28 Jul 2016 07:19:17 +0700
+
 blankon-installer (1.28-0blankon1+pr86) tambora; urgency=medium
 
   * Put UUID instead of partition path
