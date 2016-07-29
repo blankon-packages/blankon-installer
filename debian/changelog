@@ -1,4 +1,4 @@
-blankon-installer (1.29-0blankon1pr95) tambora; urgency=medium
+blankon-installer (1.29-0blankon1pr95a) tambora; urgency=medium
 
   * Add patch 01_fix_UEFI_Format.patch 
 

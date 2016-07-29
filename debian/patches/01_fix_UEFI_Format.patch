@@ -22,7 +22,7 @@ diff -Naur blankon-installer-1.29.orig/src/installer.vala blankon-installer-1.29
  
              var content = "UUID=" + root_partition + " / ext4 defaults 1 2\n";
              Utils.write_simple_file ("/tmp/fstab", content);
-+            ast_step = Step.MOUNTHOME;
++            last_step = Step.MOUNTHOME;
 +             do_next_job ();
          } else {
              last_step = Step.MOUNTHOME;
