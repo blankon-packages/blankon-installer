@@ -1,3 +1,9 @@
+blankon-installer (1.29-0blankon1+PREBETA30) tambora; urgency=medium
+
+  * New Upstream Release
+
+ -- Rahman Yusri Aftian <aftian@localhost>  Mon, 01 Aug 2016 15:09:20 +0700
+
 blankon-installer (1.29-0blankon1pr95a) tambora; urgency=medium
 
   * Add patch 01_fix_UEFI_Format.patch 
