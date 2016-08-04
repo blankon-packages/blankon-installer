@@ -1,3 +1,9 @@
+blankon-installer (1.32.x-0blankon1) tambora; urgency=medium
+
+  * New Upstream Release
+
+ -- Rahman Yusri Aftian <aftian@localhost>  Thu, 04 Aug 2016 13:20:06 +0700
+
 blankon-installer (1.32-0blankon1) tambora; urgency=medium
 
   * GPT Uefi 
