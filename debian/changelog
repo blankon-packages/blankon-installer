@@ -1,3 +1,9 @@
+blankon-installer (1.32.x2-0blankon1) tambora; urgency=medium
+
+  * Perbaikan UUID untuk swap
+
+ -- Mahyuddin <yudi.al@gmail.com>  Thu, 04 Aug 2016 20:31:40 +0700
+
 blankon-installer (1.32.x1-0blankon2) tambora; urgency=medium
 
   * New Upstream Release
