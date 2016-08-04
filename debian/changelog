@@ -1,3 +1,9 @@
+blankon-installer (1.32.x2-0blankon2) tambora; urgency=medium
+
+  * Add depends lvm2
+
+ -- Rahman Yusri Aftian <aftian@blankon.id>  Fri, 05 Aug 2016 00:08:46 +0700
+
 blankon-installer (1.32.x2-0blankon1) tambora; urgency=medium
 
   * Perbaikan UUID untuk swap
