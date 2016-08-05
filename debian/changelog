@@ -1,3 +1,9 @@
+blankon-installer (1.32.x5-0blankon1) tambora; urgency=medium
+
+  * Clean Installe 
+
+ -- Rahman Yusri Aftian <aftian@blankon.id>  Sat, 06 Aug 2016 04:30:33 +0700
+
 blankon-installer (1.32.x4-0blankon2) tambora; urgency=medium
 
   * Add depends libglib2.0-bin 
