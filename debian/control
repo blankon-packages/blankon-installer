@@ -32,6 +32,7 @@ Depends: parted,
          lvm2, 
          blankon-repository-setup,
          plymouth-theme-blankon,
+         libglib2.0-bin, 
          ${misc:Depends}, 
          ${shlibs:Depends}
 Conflicts: debian-installer-launcher
