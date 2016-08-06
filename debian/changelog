@@ -1,3 +1,9 @@
+blankon-installer (1.32.x7-0blankon1) tambora; urgency=medium
+
+  * Fix conditional logic when creating EFI/BIOS_BOOT partition 
+
+ -- Mahyuddin <yudi.al@gmail.com>  Sat, 06 Aug 2016 10:29:58 +0700
+
 blankon-installer (1.32.x6-0blankon1) tambora; urgency=medium
 
   * Remove live packages to enable update-initramfs in chroot 
