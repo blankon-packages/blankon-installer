@@ -1,3 +1,9 @@
+blankon-installer (1.32.x6-0blankon1) tambora; urgency=medium
+
+  * Remove live packages to enable update-initramfs in chroot 
+
+ -- Mahyuddin <yudi.al@gmail.com>  Sat, 06 Aug 2016 09:41:13 +0700
+
 blankon-installer (1.32.x5-0blankon1) tambora; urgency=medium
 
   * Clean Installe 
