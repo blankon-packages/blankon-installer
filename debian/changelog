@@ -1,3 +1,9 @@
+blankon-installer (1.32.x9-0blankon1) tambora; urgency=medium
+
+  * Clean Install  
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Sat, 06 Aug 2016 15:34:54 +0700
+
 blankon-installer (1.32.x8-0blankon1) tambora; urgency=medium
 
   * Move all stdout to log file 
