@@ -1,3 +1,9 @@
+blankon-installer (1.32.x10-0blankon1) tambora; urgency=medium
+
+  * New Upstream Update 
+
+ -- Rahman Yusri Aftian <aftian@blankon.id>  Wed, 10 Aug 2016 14:14:42 +0700
+
 blankon-installer (1.32.x9-0blankon1) tambora; urgency=medium
 
   * Clean Install  
