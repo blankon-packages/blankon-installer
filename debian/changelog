@@ -1,18 +1,24 @@
+blankon-installer (1.32.x15-0blankon1) tambora; urgency=medium
+
+  *  Separated process for secure install. Change default swap size to 4GB.
+
+ -- Mahyuddin <yudi.al@gmail.com>  Sat, 03 Sep 2016 13:45:56 +0700
+
 blankon-installer (1.32.x14-0blankon1) tambora; urgency=medium
 
-  * New Upstream Release. 
+  * New Upstream Release.
 
  -- Rahman Yusri Aftian <aftian@blankon.id>  Wed, 31 Aug 2016 09:11:07 +0700
 
 blankon-installer (1.32.x13-0blankon1) tambora; urgency=medium
 
-  * Remove the user setup temporary files 
+  * Remove the user setup temporary files
 
  -- Mahyuddin <yudi.al@gmail.com>  Mon, 15 Aug 2016 17:34:29 +0700
 
 blankon-installer (1.32.x12-0blankon1) tambora; urgency=medium
 
-  * Update UI 
+  * Update UI
 
  -- Mahyuddin <yudi.al@gmail.com>  Thu, 11 Aug 2016 15:07:27 +0700
 
@@ -24,55 +30,55 @@ blankon-installer (1.32.x11-0blankon1) tambora; urgency=medium
 
 blankon-installer (1.32.x10-0blankon1) tambora; urgency=medium
 
-  * New Upstream Update 
+  * New Upstream Update
 
  -- Rahman Yusri Aftian <aftian@blankon.id>  Wed, 10 Aug 2016 14:14:42 +0700
 
 blankon-installer (1.32.x9-0blankon1) tambora; urgency=medium
 
-  * Clean Install  
+  * Clean Install
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Sat, 06 Aug 2016 15:34:54 +0700
 
 blankon-installer (1.32.x8-0blankon1) tambora; urgency=medium
 
-  * Move all stdout to log file 
+  * Move all stdout to log file
 
  -- Mahyuddin <yudi.al@gmail.com>  Sat, 06 Aug 2016 13:29:52 +0700
 
 blankon-installer (1.32.x7-0blankon1) tambora; urgency=medium
 
-  * Fix conditional logic when creating EFI/BIOS_BOOT partition 
+  * Fix conditional logic when creating EFI/BIOS_BOOT partition
 
  -- Mahyuddin <yudi.al@gmail.com>  Sat, 06 Aug 2016 10:29:58 +0700
 
 blankon-installer (1.32.x6-0blankon1) tambora; urgency=medium
 
-  * Remove live packages to enable update-initramfs in chroot 
+  * Remove live packages to enable update-initramfs in chroot
 
  -- Mahyuddin <yudi.al@gmail.com>  Sat, 06 Aug 2016 09:41:13 +0700
 
 blankon-installer (1.32.x5-0blankon1) tambora; urgency=medium
 
-  * Clean Installe 
+  * Clean Installe
 
  -- Rahman Yusri Aftian <aftian@blankon.id>  Sat, 06 Aug 2016 04:30:33 +0700
 
 blankon-installer (1.32.x4-0blankon2) tambora; urgency=medium
 
-  * Add depends libglib2.0-bin 
+  * Add depends libglib2.0-bin
 
  -- Rahman Yusri Aftian <aftian@blankon.id>  Fri, 05 Aug 2016 18:06:49 +0700
 
 blankon-installer (1.32.x4-0blankon1) tambora; urgency=medium
 
-  * ??? 
+  * ???
 
  -- Mahyuddin <yudi.al@gmail.com>  Fri, 05 Aug 2016 15:08:11 +0700
 
 blankon-installer (1.32.x3-0blankon1) tambora; urgency=medium
 
-  * New upstream pr 
+  * New upstream pr
 
  -- Mahyuddin <yudi.al@gmail.com>  Fri, 05 Aug 2016 11:35:36 +0700
 
@@ -102,7 +108,7 @@ blankon-installer (1.32.x-0blankon1) tambora; urgency=medium
 
 blankon-installer (1.32-0blankon1) tambora; urgency=medium
 
-  * GPT Uefi 
+  * GPT Uefi
 
  -- Rahman Yusri Aftian <aftian@localhost>  Mon, 01 Aug 2016 16:20:00 +0700
 
@@ -114,7 +120,7 @@ blankon-installer (1.31-0blankon1) tambora; urgency=medium
 
 blankon-installer (1.29-0blankon1pr95a) tambora; urgency=medium
 
-  * Add patch 01_fix_UEFI_Format.patch 
+  * Add patch 01_fix_UEFI_Format.patch
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Fri, 29 Jul 2016 09:45:33 +0700
 
@@ -129,7 +135,7 @@ blankon-installer (1.28-0blankon1+pr86) tambora; urgency=medium
   * Put UUID instead of partition path
   *	Add UUID key
   * Add root to easymode installation as well
-  * Fix missing / mountpoint. This also fixes by cryptsetup failure in  
+  * Fix missing / mountpoint. This also fixes by cryptsetup failure in
 
  -- dotovr <dotovr@preko>  Wed, 27 Jul 2016 21:08:25 +0700
 
@@ -159,7 +165,7 @@ blankon-installer (1.27-0blankon1) tambora; urgency=medium
 
 blankon-installer (1.26-0blankon1) tambora; urgency=medium
 
-  * Update UI 
+  * Update UI
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Sat, 23 Jul 2016 10:39:54 +0700
 
@@ -172,7 +178,7 @@ blankon-installer (1.25-0blankon1) tambora; urgency=medium
 
 blankon-installer (1.24-0blankon1+PR78) tambora; urgency=medium
 
-  * Build pr78 
+  * Build pr78
 
  -- dotovr <dotovr@preko>  Fri, 15 Jul 2016 21:34:40 +0700
 
@@ -184,7 +190,7 @@ blankon-installer (1.24-0blankon1) tambora; urgency=medium
 
 blankon-installer (1.23-0blankon1) tambora; urgency=medium
 
-  * fixing avatar 
+  * fixing avatar
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Sun, 10 Jul 2016 09:37:55 +0700
 
@@ -215,7 +221,7 @@ blankon-installer (1.19-0blankon1) tambora; urgency=medium
 
 blankon-installer (1.18-0blankon1) tambora; urgency=medium
 
-  * Check mounted partition before run the real blankon-installer 
+  * Check mounted partition before run the real blankon-installer
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Mon, 04 Jul 2016 15:19:19 +0700
 
@@ -274,7 +280,7 @@ blankon-installer (1.10-0blankon1) tambora; urgency=medium
 
 blankon-installer (1.9-0blankon1) tambora; urgency=medium
 
-  * Pure javacript slide bar. Fix localization 
+  * Pure javacript slide bar. Fix localization
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Fri, 01 Jul 2016 08:25:49 +0700
 
@@ -292,13 +298,13 @@ blankon-installer (1.7-0blankon1) tambora; urgency=medium
 
 blankon-installer (1.6-0blankon1) tambora; urgency=medium
 
-  * Show release string 
+  * Show release string
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Thu, 30 Jun 2016 13:31:02 +0700
 
 blankon-installer (1.5-0blankon1) tambora; urgency=medium
 
-  * Set session and language in AccountsService 
+  * Set session and language in AccountsService
 
  -- Syai Mif <syaimif@di.blankon.in>  Wed, 29 Jun 2016 10:24:35 +0700
 
@@ -316,7 +322,7 @@ blankon-installer (1.3-0blankon1) tambora; urgency=medium
 
 blankon-installer (1.2-0blankon1) tambora; urgency=medium
 
-  * Update UI : white color for labels. Fixed content height 
+  * Update UI : white color for labels. Fixed content height
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Tue, 28 Jun 2016 11:48:57 +0700
 
@@ -347,7 +353,7 @@ blankon-installer (0.14-0blankon1) tambora; urgency=medium
 
 blankon-installer (0.13-0blankon1) tambora; urgency=medium
 
-  * Enable plymouth and GRUB_GFXPAYLOAD_LINUX 
+  * Enable plymouth and GRUB_GFXPAYLOAD_LINUX
 
  -- ahmad haris <me@princeofgiri.com>  Sun, 26 Jun 2016 09:14:18 +0700
 
@@ -431,27 +437,27 @@ blankon-installer (0.4-0blankon1) tambora; urgency=low
 
 blankon-installer (0.3-0blankon1) tambora; urgency=low
 
-  * New upstream release 
+  * New upstream release
    -Update build result image to the proper link
 
  -- Syai Mif <syaimif@di.blankon.in>  Sat, 18 Jun 2016 16:36:19 +0700
 
 blankon-installer (0.1.92) tambora; urgency=medium
 
-  * Revert pantheon-greeter to lightdm-webkit-greeter 
+  * Revert pantheon-greeter to lightdm-webkit-greeter
 
  -- dotovr <dotovr@preko>  Tue, 14 Jun 2016 20:13:08 +0700
 
 blankon-installer (0.1.91) tambora; urgency=medium
 
-  * Add build-dep libwebkitgtk-dev 
+  * Add build-dep libwebkitgtk-dev
   * Change libvala-0.32
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Tue, 07 Jun 2016 17:15:00 +0700
 
 blankon-installer (0.1.90) tambora; urgency=medium
 
-  * Use rsync instead, redirect verbose output to /tmp/b-i-copy-fs-progress 
+  * Use rsync instead, redirect verbose output to /tmp/b-i-copy-fs-progress
   * Bump versiob libvala
 
  -- Mahyuddin <yudi.al@gmail.com>  Fri, 28 Aug 2015 09:02:31 +0700
@@ -466,13 +472,13 @@ blankon-installer (0.1.89) tambora; urgency=medium
 blankon-installer (0.1.88) tambora; urgency=medium
 
   * Update UI
-  * Fix delete operation 
+  * Fix delete operation
 
  -- Mahyuddin <yudi.al@gmail.com>  Tue, 09 Jun 2015 00:21:00 +0700
 
 blankon-installer (0.1.87) tambora; urgency=medium
 
-  * Fix ESP/BIOS_GRUB partition creation 
+  * Fix ESP/BIOS_GRUB partition creation
 
  -- Mahyuddin <yudi.al@gmail.com>  Thu, 04 Jun 2015 10:07:50 +0700
 
@@ -487,13 +493,13 @@ blankon-installer (0.1.86) tambora; urgency=medium
 blankon-installer (0.1.85) tambora; urgency=medium
 
   * Update UI, partisi yang tidak memenuhi kriteria ukuran tetap menampilkan detail partisi
-  * Perbaikan skrip untuk konfigurasi autologin, mesti dikomentari dengan pagar, bukan dihapus. 
+  * Perbaikan skrip untuk konfigurasi autologin, mesti dikomentari dengan pagar, bukan dihapus.
 
  -- Mahyuddin <yudi.al@gmail.com>  Sat, 30 May 2015 14:49:16 +0700
 
 blankon-installer (0.1.84) tambora; urgency=medium
 
-  * Fixes autologin 
+  * Fixes autologin
 
  -- Mahyuddin <yudi.al@gmail.com>  Fri, 29 May 2015 11:30:09 +0700
 
@@ -542,7 +548,7 @@ blankon-installer (0.1.78) tambora; urgency=medium
 
 blankon-installer (0.1.77) tambora; urgency=medium
 
-  * Change depends gub-pc to grub-pc | grub-efi-amd64 | grub-efi-i386  
+  * Change depends gub-pc to grub-pc | grub-efi-amd64 | grub-efi-i386
 
  -- Mahyuddin <yudi.al@gmail.com>  Sat, 16 May 2015 10:52:07 +0700
 
@@ -581,7 +587,7 @@ blankon-installer (0.1.72) tambora; urgency=medium
 
 blankon-installer (0.1.71) tambora; urgency=low
 
-  * Integrasi New UI 
+  * Integrasi New UI
 
  -- Mahyuddin <yudi.al@gmail.com>  Mon, 06 Apr 2015 12:54:39 +0700
 
@@ -605,7 +611,7 @@ blankon-installer (0.1.58) suroboyo; urgency=low
 
 blankon-installer (0.1.57) suroboyo; urgency=low
 
-  * system/Makefile.am add animate.css 
+  * system/Makefile.am add animate.css
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Wed, 12 Feb 2014 08:16:54 +0700
 
@@ -627,14 +633,14 @@ blankon-installer (0.1.54) suroboyo; urgency=medium
 
   * add system/logo.png
   * add system/texture.jpg
-  * modified system/index.html Personalization form fields 
+  * modified system/index.html Personalization form fields
   * update system/Makefile.am
 
  -- mijortsa <azis.astrojim@surabaya.di.blankon.in>  Sun, 09 Feb 2014 22:49:40 +0800
 
 blankon-installer (0.1.53) suroboyo; urgency=medium
 
-  * redesign by aris eko 
+  * redesign by aris eko
 
  -- mijortsa <azis.astrojim@surabaya.di.blankon.in>  Sat, 08 Feb 2014 17:36:12 +0700
 
@@ -680,7 +686,7 @@ blankon-installer (0.1.47) suroboyo; urgency=low
 
 blankon-installer (0.1.46) suroboyo; urgency=low
 
-  * Changes: Remove packages from correct location  
+  * Changes: Remove packages from correct location
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Thu, 06 Feb 2014 10:32:31 +0700
 
@@ -718,14 +724,14 @@ blankon-installer (0.1.42) suroboyo; urgency=medium
 blankon-installer (0.1.41) suroboyo; urgency=low
 
   * b-i-setup-fs
-    - change path packages-to-remove original 
+    - change path packages-to-remove original
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Sun, 05 Jan 2014 16:11:54 +0700
 
 blankon-installer (0.1.40) suroboyo; urgency=low
 
   * b-i-setup-fs
-    - change path packages-to-remove 
+    - change path packages-to-remove
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Sun, 05 Jan 2014 10:09:27 +0700
 
@@ -738,7 +744,7 @@ blankon-installer (0.1.39) suroboyo; urgency=low
 blankon-installer (0.1.38) suroboyo; urgency=low
 
   * scripts/blankon-session-try-installer
-    - Added option user: -u "$USER" 
+    - Added option user: -u "$USER"
     - Fix script to run blankon-session by User in Live
 
  -- Mahyuddin Idram Ahmad <dotovr@di.blankon.in>  Thu, 21 Nov 2013 19:10:46 +0700
@@ -759,9 +765,9 @@ blankon-installer (0.1.36) suroboyo; urgency=low
 
 blankon-installer (0.1.35) suroboyo; urgency=low
 
-  * scripts/b-i-install-grub 
+  * scripts/b-i-install-grub
     - remove GRUB_CMDLINE_LINUX_DEFAULT="quiet consol=tty2"
-    - add GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"  
+    - add GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
 
  -- mijortsa <azis.astrojim@surabaya.di.blankon.in>  Thu, 07 Nov 2013 07:07:12 +0700
 
@@ -833,7 +839,7 @@ blankon-installer (0.1.25) rote; urgency=low
 
 blankon-installer (0.1.24) rote; urgency=low
 
-  * debian/control 
+  * debian/control
     - depends added blankon-repository-setup
   * Changes: Added missing initial slash
 
@@ -893,7 +899,7 @@ blankon-installer (0.1.17) rote; urgency=low
 
 blankon-installer (0.1.16) rote; urgency=low
 
-  * Depends to libvala-0.14-dev 
+  * Depends to libvala-0.14-dev
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Fri, 13 Apr 2012 06:31:04 +0700
 
@@ -911,14 +917,14 @@ blankon-installer (0.1.14) rote; urgency=low
 
   * Changes: Put spinner inside the progress bar
   * Changes: Schedule the done page sliding after 2 seconds so the progress bar has time to show that it's finishing
-  * New: Moved blankon-session-try-installer from blankon-session package 
+  * New: Moved blankon-session-try-installer from blankon-session package
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Thu, 02 Feb 2012 17:59:14 +0700
 
 blankon-installer (0.1.13) rote; urgency=low
 
   * New: Simple progress bar, not yet working while copying
-  * New: Call sudo in post-install script 
+  * New: Call sudo in post-install script
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Thu, 02 Feb 2012 02:41:25 +0000
 
@@ -931,27 +937,27 @@ blankon-installer (0.1.12) rote; urgency=low
   * Changes: Code consistency clean up
   * New: SwapCollector, parted can't detect swap if it's formatted by ecryptfs
   * Changes: Create swap when no swap is available
-  * Changes: Create and activate all swap partitions in fstab 
+  * Changes: Create and activate all swap partitions in fstab
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Wed, 01 Feb 2012 21:28:30 +0700
 
 blankon-installer (0.1.11) rote; urgency=low
 
   * Changes: Replacing <li> with just a spinner
-  * Fixes: BlankOn#965 - Jahitan 20120127 tidak bisa masuk menjadi super user 
+  * Fixes: BlankOn#965 - Jahitan 20120127 tidak bisa masuk menjadi super user
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Wed, 01 Feb 2012 09:44:05 +0700
 
 blankon-installer (0.1.10) rote; urgency=low
 
   * Changes: Simplify partitioning API
-  * Changes: Removed crufts 
+  * Changes: Removed crufts
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Tue, 31 Jan 2012 07:20:55 +0700
 
 blankon-installer (0.1.9) rote; urgency=low
 
-  * New: Show spinner while installing 
+  * New: Show spinner while installing
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Mon, 30 Jan 2012 13:33:04 +0700
 
@@ -962,7 +968,7 @@ blankon-installer (0.1.8) rote; urgency=low
   * Changes: Strong and weak password checks
   * Changes: Remove crufts
   * Changes: Pass encrypt home variable to backend
-  * Changes: Start installation after animation finishes 
+  * Changes: Start installation after animation finishes
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Sun, 29 Jan 2012 18:08:27 +0700
 
@@ -984,7 +990,7 @@ blankon-installer (0.1.6) rote; urgency=low
 
 blankon-installer (0.1.5) rote; urgency=low
 
-  * Changes: Skip /dev/sr* devices 
+  * Changes: Skip /dev/sr* devices
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Wed, 25 Jan 2012 20:21:11 +0700
 
@@ -992,13 +998,13 @@ blankon-installer (0.1.4) rote; urgency=low
 
   * Changes: Reboot when done
   * Changes: Hostname should be assigned the same as localhost
-  * Changes: Set environment in chroot 
+  * Changes: Set environment in chroot
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Mon, 23 Jan 2012 16:38:34 +0700
 
 blankon-installer (0.1.3) rote; urgency=low
 
-  * Added libparted0-dev at build-depend 
+  * Added libparted0-dev at build-depend
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Thu, 19 Jan 2012 21:53:39 +0700
 
@@ -1012,7 +1018,7 @@ blankon-installer (0.1.2) rote; urgency=low
 blankon-installer (0.1.1) rote; urgency=low
 
   * Initial Release:
-      
+
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Thu, 12 Jan 2012 22:32:03 +0700
 
 
