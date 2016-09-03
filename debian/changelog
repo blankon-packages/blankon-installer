@@ -1,6 +1,8 @@
 blankon-installer (1.32.x15-0blankon1) tambora; urgency=medium
 
-  *  Separated process for secure install. Change default swap size to 4GB.
+  * Separated process for secure install. Change default swap size to 4GB.
+  * debian/control:
+    - Make spesific only arch i386 and amd64
 
  -- Mahyuddin <yudi.al@gmail.com>  Sat, 03 Sep 2016 13:45:56 +0700
 
