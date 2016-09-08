@@ -1,3 +1,10 @@
+blankon-installer (1.32.x16-0blankon1) tambora; urgency=medium
+
+  * 4GB swap size
+  * Separated process for secure installation
+
+ -- Mahyuddin <yudi.al@gmail.com>  Thu, 08 Sep 2016 21:43:48 +0700
+
 blankon-installer (1.32.x15-0blankon1) tambora; urgency=medium
 
   * Separated process for secure install. Change default swap size to 4GB.
