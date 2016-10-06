@@ -1,3 +1,9 @@
+blankon-installer (1.33-0blankon2) tambora; urgency=medium
+
+  * Add 01_prop_upstream.patch 
+
+ -- Rahman Yusri Aftian <aftian@blankon.id>  Thu, 06 Oct 2016 17:22:10 +0700
+
 blankon-installer (1.33-0blankon1) tambora; urgency=medium
 
   * New upstream release:
