@@ -1,3 +1,9 @@
+blankon-installer (1.34-0blankon1.1) tambora; urgency=medium
+
+  * Add patch for remove cbatticon if no batteray detected
+
+ -- Mahyuddin <yudi.al@gmail.com>  Fri, 14 Oct 2016 09:45:00 +0700
+
 blankon-installer (1.34-0blankon1) tambora; urgency=medium
 
   * Drop 01_prop_upstream.patch

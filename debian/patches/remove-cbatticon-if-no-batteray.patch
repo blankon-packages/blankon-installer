@@ -1,0 +1,15 @@
+diff -Naur blankon-installer-1.34.orig/scripts/b-i-setup-fs blankon-installer-1.34/scripts/b-i-setup-fs
+--- blankon-installer-1.34.orig/scripts/b-i-setup-fs	2016-10-14 09:32:32.670431038 +0700
++++ blankon-installer-1.34/scripts/b-i-setup-fs	2016-10-14 09:43:32.701056689 +0700
+@@ -211,6 +211,11 @@
+     rm -f $ROOTFS/target/etc/apt/sources.list.d/local.list
+ fi
+ 
++###### Remove cbatticon for PC
++if [ ! -d /sys/class/power_supply/BAT0 ] && [ ! -d /sys/class/power_supply/BAT1 ] && [ -f $ROOTFS/target/etc/xdg/autostart/cbatticon.desktop]; then
++    rm -f $ROOTFS/target/etc/xdg/autostart/cbatticon.desktop
++fi
++
+ ###### HOME
+ 
+ if [ -f /tmp/fstab ];then
