@@ -6,7 +6,7 @@ diff -Naur blankon-installer-1.34.orig/scripts/b-i-setup-fs blankon-installer-1.
  fi
  
 +###### Remove cbatticon for PC
-+if [ ! -d /sys/class/power_supply/BAT0 ] && [ ! -d /sys/class/power_supply/BAT1 ] && [ -f $ROOTFS/target/etc/xdg/autostart/cbatticon.desktop]; then
++if [ ! -d /sys/class/power_supply/BAT0 ] && [ ! -d /sys/class/power_supply/BAT1 ] && [ -f $ROOTFS/target/etc/xdg/autostart/cbatticon.desktop ]; then
 +    rm -f $ROOTFS/target/etc/xdg/autostart/cbatticon.desktop
 +fi
 +
