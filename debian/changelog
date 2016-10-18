@@ -1,3 +1,9 @@
+blankon-installer (1.35is1.33-0blankon2) tambora; urgency=medium
+
+  * Drop remove-cbatticon-if-no-batteray.patch
+
+ -- Rahman Yusri Aftian <aftian@blankon.id>  Tue, 18 Oct 2016 11:10:11 +0700
+
 blankon-installer (1.35is1.33-0blankon1) tambora; urgency=medium
 
   * Downgrade ti 1.33 
