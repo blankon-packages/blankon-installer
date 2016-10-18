@@ -1,3 +1,9 @@
+blankon-installer (1.35-0blankon1is1.33) tambora; urgency=medium
+
+  * Downgrade ti 1.33 
+
+ -- Rahman Yusri Aftian <aftian@blankon.id>  Tue, 18 Oct 2016 10:00:15 +0700
+
 blankon-installer (1.35-0blankon1) tambora; urgency=medium
 
   * New upstream release
