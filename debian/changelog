@@ -1,3 +1,10 @@
+blankon-installer (1.35is1.33-0blankon3) tambora; urgency=medium
+
+  * 01_clean_install.patch
+  * 02_efi.patch 
+
+ -- Rahman Yusri Aftian <aftian@blankon.id>  Wed, 19 Oct 2016 15:15:01 +0700
+
 blankon-installer (1.35is1.33-0blankon2) tambora; urgency=medium
 
   * Drop remove-cbatticon-if-no-batteray.patch

@@ -1,0 +1,16 @@
+diff -Naur blankon-installer-1.35is1.33.orig/scripts/b-i-install-grub blankon-installer-1.35is1.33/scripts/b-i-install-grub
+--- blankon-installer-1.35is1.33.orig/scripts/b-i-install-grub	2016-10-19 15:11:03.608237997 +0700
++++ blankon-installer-1.35is1.33/scripts/b-i-install-grub	2016-10-19 15:13:17.453033065 +0700
+@@ -79,7 +79,11 @@
+         BOOT_TARGET="--boot-directory=/target/boot"
+     fi
+     mount $EFI_PARTITION /target/boot/efi
+-    OPT="--recheck --bootloader-id=Xecure --efi-directory=/target/boot/efi --root-directory=/target $BOOT_TARGET $DEVICE"
++    if [ -f /tmp/pass ];then
++       OPT="--recheck --bootloader-id=Xecure --efi-directory=/target/boot/efi --root-directory=/target $BOOT_TARGET $DEVICE"
++    else
++       OPT="--recheck --bootloader-id=BlankOn --efi-directory=/target/boot/efi --root-directory=/target $BOOT_TARGET $DEVICE"
++    fi
+     # Expose it, for debugging purpose
+     echo $OPT
+     echo "Installing GRUB EFI"
