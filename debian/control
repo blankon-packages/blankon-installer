@@ -33,6 +33,7 @@ Depends: parted,
          blankon-repository-setup,
          plymouth-theme-blankon,
          libglib2.0-bin,
+         tempel,
          ${misc:Depends},
          ${shlibs:Depends}
 Conflicts: debian-installer-launcher

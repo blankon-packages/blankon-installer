@@ -1,3 +1,13 @@
+blankon-installer (1.36-0blankon1) tambora; urgency=medium
+
+  * Drop patch 01_clean_install.patch
+  * Drop patch 02_efi.patch
+  * new Upstream Release
+    - Set minimum spec requirements : 1GB RAM 8GB Dis
+  * debian/control add depends: tempel
+
+ -- Rahman Yusri Aftian <aftian@blankon.id>  Mon, 31 Oct 2016 23:15:44 +0700
+
 blankon-installer (1.35is1.33-0blankon3) tambora; urgency=medium
 
   * 01_clean_install.patch
