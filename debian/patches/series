@@ -1,2 +1,2 @@
-01_clean_install.patch
+#01_clean_install.patch
 02_efi.patch
