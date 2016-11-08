@@ -1,3 +1,9 @@
+blankon-installer (1.37-0blankon1) tambora; urgency=medium
+
+  * Add big warning in advanced mode
+
+ -- Rahman Yusri Aftian <aftian@blankon.id>  Tue, 08 Nov 2016 20:37:16 +0700
+
 blankon-installer (1.36-0blankon1) tambora; urgency=medium
 
   * Drop patch 01_clean_install.patch
