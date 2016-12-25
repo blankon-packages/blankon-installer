@@ -1,3 +1,9 @@
+blankon-installer (1.38-0blankon1) tambora; urgency=medium
+
+  * New upstream release
+
+ -- AnTo SamalonA <ansamsoftdev@gmail.com>  Mon, 26 Dec 2016 01:00:34 +0800
+
 blankon-installer (1.37-0blankon1) tambora; urgency=medium
 
   * Add big warning in advanced mode
