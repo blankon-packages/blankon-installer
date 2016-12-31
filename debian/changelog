@@ -1,3 +1,9 @@
+blankon-installer (1.38-0blankon2) tambora; urgency=medium
+
+  * Add 01_fix_text_http.patch 
+
+ -- Rahman Yusri Aftian <aftian@blankon.id>  Sat, 31 Dec 2016 09:38:31 +0700
+
 blankon-installer (1.38-0blankon1) tambora; urgency=medium
 
   * New upstream release
