@@ -1,3 +1,11 @@
+blankon-installer (1.39-0blankon1) tambora; urgency=medium
+
+  * Drop 01_text_http.patch
+  * Fix partition editor values
+  *  Fix Bahasa Indonesia localization strings
+
+ -- Rahman Yusri Aftian <aftian@blankon.id>  Sun, 01 Jan 2017 10:32:10 +0700
+
 blankon-installer (1.38-0blankon2) tambora; urgency=medium
 
   * Add 01_fix_text_http.patch 

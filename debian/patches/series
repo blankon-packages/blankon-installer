@@ -1,3 +1,3 @@
 #01_clean_install.patch
 #02_efi.patch
-01_fix_text_http.patch
+#01_fix_text_http.patch
