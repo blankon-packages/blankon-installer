@@ -1,3 +1,9 @@
+blankon-installer (1.39-0blankon2) uluwatu; urgency=medium
+
+  * Rebuild for uluwatu
+
+ -- Anto Samalona <ansamsoftdev@gmail.com>  Sun, 21 May 2017 12:59:59 +0800
+
 blankon-installer (1.39-0blankon1) tambora; urgency=medium
 
   * Drop 01_text_http.patch
