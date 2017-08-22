@@ -1,3 +1,9 @@
+blankon-installer (1.39-0blankon4) uluwatu; urgency=medium
+
+  * Rebuild
+
+ -- AnTo SamalonA <ansamsoftdev@gmail.com>  Tue, 22 Aug 2017 21:45:17 +0700
+
 blankon-installer (1.39-0blankon3) uluwatu; urgency=medium
 
   * Update libvala version
