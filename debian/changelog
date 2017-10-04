@@ -1,3 +1,10 @@
+blankon-installer (1.40-0blankon1) uluwatu; urgency=medium
+
+  * New release:
+    - Update UI : Fix localization, ticket url
+
+ -- AnTo SamalonA <ansamsoftdev@gmail.com>  Wed, 04 Oct 2017 14:43:18 +0800
+
 blankon-installer (1.39-0blankon4) uluwatu; urgency=medium
 
   * Rebuild
