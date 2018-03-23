@@ -1,3 +1,9 @@
+blankon-installer (1.42-0blankon1) uluwatu; urgency=medium
+
+  * fix gfxmode for resolution
+
+ -- Anto Samalona <ansamsoftdev@gmail.com>  Sat, 24 Mar 2018 00:15:25 +0800
+
 blankon-installer (1.41-0blankon1) uluwatu; urgency=medium
 
   * fix resolution to 16:9
