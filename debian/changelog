@@ -1,3 +1,9 @@
+blankon-installer (1.41-0blankon1) uluwatu; urgency=medium
+
+  * fix resolution to 16:9
+
+ -- Anto Samalona <ansamsoftdev@gmail.com>  Fri, 23 Mar 2018 23:50:16 +0800
+
 blankon-installer (1.40-0blankon1) uluwatu; urgency=medium
 
   * New release:
