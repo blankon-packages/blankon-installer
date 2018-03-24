@@ -1,3 +1,9 @@
+blankon-installer (1.43-0blankon1) uluwatu; urgency=medium
+
+  * Update new condition for pre-installed efi partition
+
+ -- Anto Samalona <ansamsoftdev@gmail.com>  Sat, 24 Mar 2018 21:23:50 +0800
+
 blankon-installer (1.42-0blankon1) uluwatu; urgency=medium
 
   * fix gfxmode for resolution
