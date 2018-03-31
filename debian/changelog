@@ -1,3 +1,9 @@
+blankon-installer (1.44-0blankon1) uluwatu; urgency=medium
+
+  * Upload log only if BIFT instance is active
+
+ -- antosamalona <ansamsoftdev@gmail.com>  Sat, 31 Mar 2018 23:36:35 +0800
+
 blankon-installer (1.43-0blankon1) uluwatu; urgency=medium
 
   * Update new condition for pre-installed efi partition
